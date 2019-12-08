@@ -15,6 +15,7 @@ import { AppNavComponent } from './app-nav/app-nav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { SharedImportsModule } from './shared/shared-imports.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    SharedImportsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

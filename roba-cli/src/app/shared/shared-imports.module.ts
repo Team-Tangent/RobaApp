@@ -30,24 +30,9 @@ export const SHARED_MATERIAL_MODULES = [
   FlexLayoutModule
 ];
 
-<<<<<<< HEAD
 @NgModule({
   declarations: [],
   imports: [CommonModule, ...SHARED_MATERIAL_MODULES],
   exports: [...SHARED_MATERIAL_MODULES]
 })
 export class SharedImportsModule {}
-=======
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    ...SHARED_MATERIAL_MODULES
-  ],
-  exports: [
-    ...SHARED_MATERIAL_MODULES
-  ],
-})
-export class SharedImportsModule { }
->>>>>>> development

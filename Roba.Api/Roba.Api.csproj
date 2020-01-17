@@ -12,4 +12,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Roba.SqlDbServices\Roba.SqlDbServices.csproj" />
+    <ProjectReference Include="..\Roba\Roba.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -14,3 +14,13 @@ namespace Roba
         //public enum ItemType { get; set; }
     }
 }
+
+namespace Roba
+{
+    public enum ItemType
+    {
+        VideoGame,
+        Book,
+        Movie
+    }
+}

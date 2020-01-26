@@ -212,8 +212,8 @@ namespace Roba.Api
                 {
                     ClientId = microsoftOptions[nameof(MicrosoftAuthSettings.ClientId)],
                     ClientSecret = microsoftOptions[nameof(MicrosoftAuthSettings.ClientSecret)],
-                    AppName = "Simple CRM",
-                    Realm = "Nexul Academy"
+                    AppName = "Roba",
+                    Realm = "Roba Labs"
                 };
             });
 
@@ -231,7 +231,7 @@ namespace Roba.Api
                 context => !context.Request.Path.StartsWithSegments("/api"),
                 appBuilder => appBuilder.UseSpa(spa =>
                 {
-                    spa.Options.SourcePath = "../simple-crm-cli";
+                    spa.Options.SourcePath = "../-cli";
                     if (env.IsDevelopment())
                     {
                         spa.UseAngularCliServer(npmScript: "start");

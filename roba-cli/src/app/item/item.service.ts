@@ -15,4 +15,8 @@ export class ItemService {
   save(item: Item): Observable<Item> {
     return;
   }
+
+  delete(item: Item): Observable<Item> {
+    return;
+  }
 }

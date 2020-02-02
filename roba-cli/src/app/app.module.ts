@@ -16,14 +16,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedImportsModule } from './shared/shared-imports.module';
-import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
-    AppNavComponent,
-    ItemComponent
+    AppNavComponent
   ],
   imports: [
     BrowserModule,

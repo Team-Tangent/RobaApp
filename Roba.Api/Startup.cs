@@ -125,7 +125,7 @@ namespace Roba.Api
             services.AddOpenApiDocument(options =>
             {
                 options.DocumentName = "v1";
-                options.Title = "Simple CRM";
+                options.Title = "Roba";
                 options.Version = "1.0";
                 options.DocumentProcessors.Add(new SecurityDefinitionAppender("JWT token",
                     new List<string>(), //no scope names to add

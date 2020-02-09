@@ -30,15 +30,9 @@ export const SHARED_MATERIAL_MODULES = [
   FlexLayoutModule
 ];
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    ...SHARED_MATERIAL_MODULES
-  ],
-  exports: [
-    ...SHARED_MATERIAL_MODULES
-  ],
+  imports: [CommonModule, ...SHARED_MATERIAL_MODULES],
+  exports: [...SHARED_MATERIAL_MODULES]
 })
-export class SharedImportsModule { }
+export class SharedImportsModule {}

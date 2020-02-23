@@ -197,12 +197,10 @@ namespace Roba.Api
             }
 
             app.UseHttpsRedirection();
-            app.UseResponseCaching();
-
             app.UseStaticFiles();
+            app.UseResponseCaching();
             app.UseSpaStaticFiles();
             app.UseCookiePolicy();
-
             app.UseAuthentication();
             app.UseOpenApi();
             app.UseSwaggerUi3(settings =>
@@ -231,7 +229,7 @@ namespace Roba.Api
                 context => !context.Request.Path.StartsWithSegments("/api"),
                 appBuilder => appBuilder.UseSpa(spa =>
                 {
-                    spa.Options.SourcePath = "../-cli";
+                    spa.Options.SourcePath = "../roba-cli";
                     if (env.IsDevelopment())
                     {
                         spa.UseAngularCliServer(npmScript: "start");

@@ -17,13 +17,21 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedImportsModule } from './shared/shared-imports.module';
 import { ItemComponent } from './item/item.component';
+import { LoginComponent } from './account/login/login.component';
+import { LogoutCompleteComponent } from './account/logout-complete/logout-complete.component';
+import { NotAuthorizedComponent } from './account/not-authorized/not-authorized.component';
+import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-microsoft.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
     AppNavComponent,
-    ItemComponent
+    ItemComponent,
+    LoginComponent,
+    LogoutCompleteComponent,
+    NotAuthorizedComponent,
+    SigninMicrosoftComponent
   ],
   imports: [
     BrowserModule,

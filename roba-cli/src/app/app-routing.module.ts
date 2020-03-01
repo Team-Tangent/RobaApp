@@ -8,12 +8,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'app-dashboard',
     pathMatch: 'full',
-    children: [
-      {
-        path: 'land',
-        component: LandComponent,
-      },
-  }
+  },
+  {
+    path: 'land',
+    component: LandComponent,
+  },
 ];
 
 @NgModule({

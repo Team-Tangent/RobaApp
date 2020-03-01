@@ -21,6 +21,7 @@ import { LoginComponent } from './account/login/login.component';
 import { LogoutCompleteComponent } from './account/logout-complete/logout-complete.component';
 import { NotAuthorizedComponent } from './account/not-authorized/not-authorized.component';
 import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-microsoft.component';
+import { LandComponent } from './land/land.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-micr
     LoginComponent,
     LogoutCompleteComponent,
     NotAuthorizedComponent,
-    SigninMicrosoftComponent
+    SigninMicrosoftComponent,
+    LandComponent
   ],
   imports: [
     BrowserModule,

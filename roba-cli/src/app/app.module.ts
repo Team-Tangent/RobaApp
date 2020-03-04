@@ -22,6 +22,7 @@ import { LogoutCompleteComponent } from './account/logout-complete/logout-comple
 import { NotAuthorizedComponent } from './account/not-authorized/not-authorized.component';
 import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-microsoft.component';
 import { LandComponent } from './land/land.component';
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { LandComponent } from './land/land.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    SharedImportsModule
+    SharedImportsModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

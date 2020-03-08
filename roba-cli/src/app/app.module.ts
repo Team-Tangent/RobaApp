@@ -24,6 +24,7 @@ import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-micr
 import { LandComponent } from './land/land.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { SlideshowModule } from 'ng-simple-slideshow';
     NotAuthorizedComponent,
     SigninMicrosoftComponent,
     LandComponent
+
   ],
   imports: [
     BrowserModule,

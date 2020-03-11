@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Roba.SqlDbServices
 {
     public class SqlUserData : IUserData
     {
-        private readonly CrmIdentityDbContext context;
+        private readonly RobaIdentityDbContext context;
 
-        public SqlUserData(CrmIdentityDbContext context)
+        public SqlUserData(RobaIdentityDbContext context)
         {
             this.context = context;
         }
 
-        public CrmIdentityUser Get(Guid id)
+        public RobaIdentityUser Get(Guid id)
         {
             return context.Users.FirstOrDefault(x => x.Id == id);
         }
 
-        public CrmIdentityUser GetSingle(string userName)
+        public RobaIdentityUser GetSingle(string userName)
         {
             return context.Users.FirstOrDefault(x => x.UserName == userName);
         }

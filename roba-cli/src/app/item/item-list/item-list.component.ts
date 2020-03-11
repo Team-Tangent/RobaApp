@@ -18,7 +18,8 @@ export class ItemListComponent implements OnInit {
   LentTo: '',
   CanBeBorrowed: true,
   BorrowedDate: new Date(),
-  ReturnDate: new Date()
+  ReturnDate: new Date(),
+  image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
       ItemId: 2,
@@ -29,7 +30,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     },
     {
       ItemId: 3,
@@ -40,7 +42,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Gary',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
     },
     {
       ItemId: 2,
@@ -51,7 +54,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
       ItemId: 2,
@@ -62,7 +66,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
       ItemId: 2,
@@ -73,7 +78,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
     },
     {
       ItemId: 2,
@@ -84,7 +90,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
       ItemId: 2,
@@ -95,7 +102,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
       ItemId: 2,
@@ -106,7 +114,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
       ItemId: 2,
@@ -117,7 +126,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
       ItemId: 2,
@@ -128,7 +138,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
       ItemId: 2,
@@ -139,7 +150,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
       ItemId: 2,
@@ -150,7 +162,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
       ItemId: 2,
@@ -161,7 +174,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
       ItemId: 2,
@@ -172,7 +186,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
       ItemId: 2,
@@ -183,7 +198,8 @@ export class ItemListComponent implements OnInit {
       LentTo: 'Greg',
       CanBeBorrowed: true,
       BorrowedDate: new Date(),
-      ReturnDate: new Date()
+      ReturnDate: new Date(),
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
     },
   ];
 

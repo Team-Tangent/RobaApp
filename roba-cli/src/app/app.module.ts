@@ -16,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedImportsModule } from './shared/shared-imports.module';
+<<<<<<< HEAD
 import { ItemComponent } from './item/item.component';
 import { LoginComponent } from './account/login/login.component';
 import { LogoutCompleteComponent } from './account/logout-complete/logout-complete.component';
@@ -24,22 +25,33 @@ import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-micr
 import { LandComponent } from './land/land.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
 
+=======
+import { AccountModule } from './account/account.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+>>>>>>> RyanDev1
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
     AppNavComponent,
+<<<<<<< HEAD
     ItemComponent,
     LoginComponent,
     LogoutCompleteComponent,
     NotAuthorizedComponent,
     SigninMicrosoftComponent,
     LandComponent
+=======
+    LandingPageComponent,
+    
+>>>>>>> RyanDev1
 
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
@@ -52,7 +64,12 @@ import { SlideshowModule } from 'ng-simple-slideshow';
     MatSidenavModule,
     MatListModule,
     SharedImportsModule,
+<<<<<<< HEAD
     SlideshowModule
+=======
+    AccountModule,
+    
+>>>>>>> RyanDev1
   ],
   providers: [],
   bootstrap: [AppComponent]

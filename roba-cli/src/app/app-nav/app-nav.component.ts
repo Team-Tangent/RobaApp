@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { Store, select } from '@ngrx/store';
+import { selectShowSideNav, toggleSidenav, LayoutState, closeSidenav } from '../store/layout.store';
 
 
 
@@ -17,7 +19,18 @@ export class AppNavComponent {
       map(result => result.matches),
       shareReplay()
     );
+    showSideNav$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private store: Store<LayoutState>) {
+    this.showSideNav$ = this.store.pipe(select(selectShowSideNav));
+  }
+
+  sideNavToggle() {
+    this.store.dispatch(toggleSidenav());
+  }
+
+  closeSideNav() {
+    this.store.dispatch(closeSidenav());
+  }
 
 }

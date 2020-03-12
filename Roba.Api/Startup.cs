@@ -143,14 +143,7 @@ namespace Roba.Api
 
             services.AddResponseCaching();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
-            services.AddMvc(o =>
+             services.AddMvc(o =>
             {
                 o.Filters.Add(typeof(GlobalExceptionFilter));
             })
@@ -165,9 +158,17 @@ namespace Roba.Api
                     new StringEnumConverter(true)
                     };
                 });
+
             services.AddDbContext<RobaIdentityDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddDefaultUI(UIFramework.Bootstrap4)
+            //    .AddEntityFrameworkStores<RobaIdentityDbContext>();
+                
+            //services.AddDbContext<RobaIdentityDbContext>(options =>
+            //    options.UseSqlServer(
+            //        Configuration.GetConnectionString("DefaultConnection")));
 
 
             services.AddSingleton<IJwtFactory, JwtFactory>();
@@ -197,10 +198,12 @@ namespace Roba.Api
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseResponseCaching();
+
+            app.UseStaticFiles();
             app.UseSpaStaticFiles();
             app.UseCookiePolicy();
+
             app.UseAuthentication();
             app.UseOpenApi();
             app.UseSwaggerUi3(settings =>

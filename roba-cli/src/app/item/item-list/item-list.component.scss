@@ -1,0 +1,26 @@
+
+.item-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+.item-card {
+  margin: 10px 10px;
+  width: 200px;
+  justify-content: center;
+}
+
+.card-image img {
+  max-height: 200px;
+  max-width: 240px;
+}
+
+

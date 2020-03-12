@@ -1,12 +1,14 @@
 export type ItemType = 'VideoGame' | 'Book' | 'Movie';
 
 export interface Item {
-  ItemId: number;
-  ItemName: number;
-  CreatedOnDate: string;
-  Owner: number;
-  LentOut: boolean;
-  CanBeBorrowed: boolean;
-  BorrowedDate: string;
-  ReturnDate: string;
+  itemId: number;
+  itemName: string;
+  createdOnDate: string;
+  ownerId: number;
+  lentOut: boolean;
+  lentTo: string;
+  canBeBorrowed: boolean;
+  borrowedDate: string;
+  returnDate: string;
+  image: string;
 }

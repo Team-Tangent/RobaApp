@@ -18,8 +18,12 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\Roba.SqlDbServices\Roba.SqlDbServices.csproj" />
-    <ProjectReference Include="..\Roba\Roba.csproj" />
+    <ProjectReference Include="..\Roba.SqlDbServices\Roba.SqlDbServices.csproj">
+      <GlobalPropertiesToRemove>;WebPublishProfileFile</GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Roba\Roba.csproj">
+      <GlobalPropertiesToRemove>;WebPublishProfileFile</GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

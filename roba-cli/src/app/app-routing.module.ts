@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ItemModule } from './Item/item.module';
+import { AuthenticatedGuard } from './account/authenticated.guard';
+import { ItemModule } from './item/item.module';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'app-dashboard',
+    redirectTo: 'items',
     pathMatch: 'full'
+  },
+  {
+    path: 'items',
+    loadChildren: () => import('./item/item.module').then(m => m.ItemModule)
   }
 ];
 

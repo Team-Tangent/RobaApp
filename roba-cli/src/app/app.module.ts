@@ -16,25 +16,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedImportsModule } from './shared/shared-imports.module';
-import { ItemComponent } from './item/item.component';
-import { LoginComponent } from './account/login/login.component';
-import { LogoutCompleteComponent } from './account/logout-complete/logout-complete.component';
-import { NotAuthorizedComponent } from './account/not-authorized/not-authorized.component';
-import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-microsoft.component';
+import { AccountModule } from './account/account.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
     AppNavComponent,
-    ItemComponent,
-    LoginComponent,
-    LogoutCompleteComponent,
-    NotAuthorizedComponent,
-    SigninMicrosoftComponent
+    
+
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
@@ -46,7 +41,9 @@ import { SigninMicrosoftComponent } from './account/signin-microsoft/signin-micr
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    SharedImportsModule
+    SharedImportsModule,
+    AccountModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,6 +20,12 @@ import { AccountModule } from './account/account.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandComponent } from './land/land.component';
+import { StoreModule } from '@ngrx/store';
+import { layoutFeatureKey, layoutReducer } from './store/layout.store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { environment } from '../environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -48,6 +54,15 @@ import { LandComponent } from './land/land.component';
     SharedImportsModule,
     AccountModule,
 
+    StoreModule.forRoot({}), // for no global state, use an empty object,  {}.
+    StoreModule.forFeature(layoutFeatureKey, layoutReducer),
+    StoreDevtoolsModule.instrument({
+      name: 'Nexul Academy - Roba App',
+
+      // In a production build you would want to disable the Store Devtools
+      // logOnly: environment.production,
+    }),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent]

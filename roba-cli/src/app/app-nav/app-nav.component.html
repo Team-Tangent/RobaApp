@@ -1,5 +1,9 @@
 
+    <div style="height:100vh; display:flex; flex-direction:column;">
     <mat-toolbar fxLayout = "row" fxLayoutAlign = "space-between center" color="primary">
+      <button mat-icon-button matRipple (click)="sideNavToggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
       <div>Roba</div>
       <div>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -13,4 +17,26 @@
       </mat-menu>
       </div>
     </mat-toolbar>
+    <mat-sidenav-container style="flex:1 100%">
+      <mat-sidenav #sidenav [opened]="showSideNav$ | async" (closed)="closeSideNav()" [mode]="'over'">
+        <mat-nav-list>
+          <a mat-list-item matRipple [style.position]="'relative'"
+            routeLinkActive="selected" [routerLink]="['./items']">
+            <mat-icon matListIcon>home</mat-icon>
+            <h4 matLine>Items</h4>
+          </a>
+          <a mat-list-item matRipple [style.position]="'relative'"
+            routeLinkActive="selected" [routerLink]="['.']">
+            <mat-icon matListIcon>chat</mat-icon>
+            <h4 matLine>Pipeline</h4>
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <router-outlet></router-outlet>
+    </mat-sidenav-container>
+    <div class="footer">
+      Footer
+      SideNav: {{showSideNav$ | async}}
+    </div>
+  </div>
 

@@ -11,7 +11,7 @@ const routes: Routes = [
     pathMatch: 'full',
     component: ItemListComponent,
     canActivate: [AuthenticatedGuard]
-  }
+  },
 ];
 
 @NgModule({

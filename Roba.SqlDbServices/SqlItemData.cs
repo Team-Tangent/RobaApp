@@ -16,14 +16,12 @@ namespace Roba.SqlDbServices
         public void AddItem(Item item)
         {
             context.Add(item);
-            context.SaveChanges();
         }
 
 
         public void DeleteItem(Item item)
         {
             context.Remove(item);
-            context.SaveChanges();
         }
 
         public List<Item> GetAllItemsForUser(int UserId)
@@ -38,10 +36,8 @@ namespace Roba.SqlDbServices
 
         public void UpdateItem(Item item)
         {
-            //Talk about how to handle updating. Track changes on front end, and just sav
-            throw new NotImplementedException();
+            //changes tracked automatically. 
         }
-
         public void Commit()
         {
             context.SaveChanges();

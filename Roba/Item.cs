@@ -11,6 +11,8 @@ namespace Roba
         public bool CanBeBorrowed { get; set; }
         public DateTime BorrowedDate { get; set; }
         public DateTime ReturnDate { get; set; }
-        public string Image { get; set; }
+        public byte[] ImageFileContent { get; set; }
+        public string ImageFileType { get; set; }
+
     }
 }

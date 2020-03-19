@@ -6,7 +6,9 @@ namespace Roba
 {
     public interface IUserData
     {
-        RobaIdentityUser Get(Guid id);
-        RobaIdentityUser GetSingle(string userName);
+        RobaIdentityUser GetUserById(Guid UserId);
+        List<RobaIdentityUser> GetAllUsers();
+        void UpdateUser(RobaIdentityUser user);
+        void Commit();
     }
 }

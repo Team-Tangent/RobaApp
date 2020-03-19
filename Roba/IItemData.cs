@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Roba
 {
     public interface IItemData
@@ -6,12 +8,15 @@ namespace Roba
         /// <summary>
         /// Gets a single Item by id
         /// </summary>
-        Item Get(int ItemId);
+        Item GetItemById(int ItemId);
+        List<Item> GetAllItemsForUser(int UserId);
 
-        void Add(Item item);    
+        void AddItem(Item item);    
 
-        void Update(Item item);
-
+        void UpdateItem(Item item);
+        void DeleteItem(Item item);
         void Commit();
+
+       
     }
 }

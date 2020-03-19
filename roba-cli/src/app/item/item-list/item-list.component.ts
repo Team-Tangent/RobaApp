@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item.model';
+import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material';
+import { ItemCreateDialogComponent } from '../item-create-dialog/item-create-dialog.component';
 
 @Component({
   selector: 'app-item-list',
@@ -203,9 +206,16 @@ export class ItemListComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+  }
+
+  addItem(){
+    const dialogRef = this.dialog.open(ItemCreateDialogComponent, {
+      width: '250px',
+      data: null,
+    });
   }
 
 }

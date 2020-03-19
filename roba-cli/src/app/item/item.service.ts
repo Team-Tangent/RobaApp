@@ -8,12 +8,13 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   search(term: string): Observable<Item[]> {
-    // return this.http.get<Item[]>();
+    // return this.http.get<Item[]>('/api/item/search?term=' + term);
     return; // this needs to be fixed;
   }
 
   save(item: Item): Observable<Item> {
-    return;
+    // return this.http.post<Item>('/api/item/save, item);
+    return; // fix this when ready
   }
 
   delete(item: Item): Observable<Item> {

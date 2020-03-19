@@ -1,3 +1,10 @@
+<header>
+  <h1>Items</h1>
+  <button class="addButton" mat-fab>
+    <!-- (click)="addItem()" -->
+    <mat-icon aria-label="Add Item">+</mat-icon>
+  </button>
+</header>
 <section class="item-card-container">
   <mat-card class="item-card" *ngFor="let item of items">
     <mat-card-header>
@@ -11,6 +18,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
+      <a mat-flat-button>View</a>
       <a mat-flat-button>Edit</a>
       <a mat-flat-button>Delete</a>
     </mat-card-actions>

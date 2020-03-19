@@ -12,7 +12,7 @@ import {
   MatInputModule,
   MatSelectModule,
   MatSnackBarModule,
-  MatProgressSpinnerModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -29,7 +29,7 @@ export const SHARED_MATERIAL_MODULES = [
   MatSelectModule,
   MatSnackBarModule,
   FlexLayoutModule,
-  MatProgressSpinnerModule,
+  MatProgressSpinnerModule
 ];
 
 @NgModule({

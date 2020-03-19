@@ -1,18 +1,17 @@
-<section class="item-card-container">
-  <mat-card class="item-card" *ngFor="let item of items">
-    <mat-card-header>
-      <mat-card-title>{{item.itemName}}</mat-card-title>
-      <mat-card-subtitle>{{item.lentOut ? item.lentTo + ' has it!' : 'Created on ' + item.createdOnDate }}
-      </mat-card-subtitle>
+<div class="item-card-container">
+  <mat-card class="item-card"  *ngFor="let item of items">
+    <mat-card-header class="card-image">
+      <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
     </mat-card-header>
     <mat-card-content class="card-content">
-      <div class="card-image">
-        <img mat-card-image src={{item.image}} />
+      <div>
+        {{item.ItemName}}
+        {{item.Owner}}
       </div>
+      <div>Sun Mar 08 2020</div>
+      <div>{{item.CanBeBorrowed}}</div>
+      <div>Sun Mar 08 2020</div>
     </mat-card-content>
-    <mat-card-actions>
-      <a mat-flat-button>Edit</a>
-      <a mat-flat-button>Delete</a>
-    </mat-card-actions>
   </mat-card>
-</section>
+</div>
+

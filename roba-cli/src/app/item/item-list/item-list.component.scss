@@ -3,24 +3,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
-  justify-content: space-evenly;
-}
-
-mat-card-header {
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .item-card {
   margin: 10px 10px;
-  width: 200px;
-  justify-content: center;
+  max-width: 260px;
+  max-height: 340px;
+  justify-content: space-evenly;
 }
 
 .card-image img {
-  max-height: 200px;
-  max-width: 240px;
+  max-width: 180px;
+  max-height: auto;
+  margin: 0 auto;
+  justify-content: center;
+}
+.card-content {
+  justify-content: center;
 }
 
 

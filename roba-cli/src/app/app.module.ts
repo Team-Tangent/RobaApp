@@ -19,13 +19,10 @@ import { SharedImportsModule } from './shared/shared-imports.module';
 import { AccountModule } from './account/account.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LandComponent } from './land/land.component';
 import { StoreModule } from '@ngrx/store';
 import { layoutFeatureKey, layoutReducer } from './store/layout.store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { SlideshowModule } from 'ng-simple-slideshow';
-
 import { environment } from '../environments/environment';
 
 
@@ -35,8 +32,7 @@ import { environment } from '../environments/environment';
     AppDashboardComponent,
     AppNavComponent,
     LandingPageComponent,
-    LandComponent
-
+    
 
   ],
   imports: [
@@ -55,7 +51,6 @@ import { environment } from '../environments/environment';
     MatListModule,
     SharedImportsModule,
     AccountModule,
-    SlideshowModule,
 
     StoreModule.forRoot({}), // for no global state, use an empty object,  {}.
     StoreModule.forFeature(layoutFeatureKey, layoutReducer),

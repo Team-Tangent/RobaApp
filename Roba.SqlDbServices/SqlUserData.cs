@@ -8,27 +8,20 @@ namespace Roba.SqlDbServices
     public class SqlUserData : IUserData
     {
         private readonly RobaIdentityDbContext context;
-        public SqlUserData (RobaIdentityDbContext context)
+
+        public SqlUserData(RobaIdentityDbContext context)
         {
             this.context = context;
         }
-        public List<RobaIdentityUser> GetAllUsers()
+
+        public RobaIdentityUser Get(Guid id)
         {
-            return context.Users.ToList();
+            return context.Users.FirstOrDefault(x => x.Id == id);
         }
 
-        public RobaIdentityUser GetUserById(Guid UserId)
+        public RobaIdentityUser GetSingle(string userName)
         {
-            return context.Users.FirstOrDefault(x => x.Id == UserId);
-        }
-
-        public void UpdateUser(RobaIdentityUser user)
-        {
-            context.Update(user);
-        }
-        public void Commit()
-        {
-            context.SaveChanges();
+            return context.Users.FirstOrDefault(x => x.UserName == userName);
         }
     }
 }

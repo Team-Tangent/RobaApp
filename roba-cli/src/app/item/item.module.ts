@@ -7,6 +7,7 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { SharedImportsModule } from '../shared/shared-imports.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemCreateDialogComponent } from './item-create-dialog/item-create-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ItemCreateDialogComponent } from './item-create-dialog/item-create-dial
     ItemRoutingModule,
     SharedImportsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   entryComponents : [
     ItemCreateDialogComponent,

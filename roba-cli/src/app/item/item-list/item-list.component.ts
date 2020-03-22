@@ -213,7 +213,8 @@ export class ItemListComponent implements OnInit {
 
   addItem(){
     const dialogRef = this.dialog.open(ItemCreateDialogComponent, {
-      width: '250px',
+      width: '300px',
+      height: '400px',
       data: null,
     });
   }

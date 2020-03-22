@@ -224,9 +224,9 @@ export class ItemListComponent implements OnInit {
     });
   }
 
-  openDetail(itemId){
-    if(itemId){
-      this.router.navigate([`./items/${itemId}`]);
+  openDetail(item){
+    if(item.itemId){
+      this.route.navigate([`./items/${item.itemId}`]);
     }
   }
 

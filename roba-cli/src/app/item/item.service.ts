@@ -20,4 +20,8 @@ export class ItemService {
   delete(item: Item): Observable<Item> {
     return;
   }
+
+  // get(itemId: number) {
+  //   return this.http.get<Item>('api/item/' + itemId);
+  // }
 }

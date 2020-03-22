@@ -22,6 +22,10 @@ export class ItemComponent implements OnInit {
 
   ngOnInit() {
     this.itemId = +this.route.snapshot.params.id;
+    // this.itemService.get(this.itemId)
+    //   .subscribe(item => {
+    //     this.item = item;
+    //   })
   }
 
 }

@@ -12,6 +12,12 @@ const routes: Routes = [
     component: ItemListComponent,
     canActivate: [AuthenticatedGuard]
   },
+  {
+    path: '/:id',
+    pathMatch: 'full',
+    component: ItemComponent,
+    canActivate: [AuthenticatedGuard]
+  },
 ];
 
 @NgModule({

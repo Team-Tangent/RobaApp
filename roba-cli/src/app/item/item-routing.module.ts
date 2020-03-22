@@ -13,7 +13,7 @@ const routes: Routes = [
     canActivate: [AuthenticatedGuard]
   },
   {
-    path: '/:id',
+    path: 'item/:id',
     pathMatch: 'full',
     component: ItemComponent,
     canActivate: [AuthenticatedGuard]

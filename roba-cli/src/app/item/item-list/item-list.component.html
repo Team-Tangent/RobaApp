@@ -7,19 +7,24 @@
 <section class="item-card-container">
   <mat-card class="item-card" *ngFor="let item of items">
     <mat-card-header>
-      <mat-card-title>{{item.itemName}}</mat-card-title>
-      <mat-card-subtitle>{{item.lentOut ? item.lentTo + ' has it!' : 'Created on ' + item.createdOnDate }}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content class="card-content">
       <div class="card-image">
         <img mat-card-image src={{item.image}} />
       </div>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <mat-card-title>
+        {{item.itemName}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{item.lentOut ? item.lentTo + ' has it!' : 'Created on ' + item.createdOnDate }}
+      </mat-card-subtitle>
     </mat-card-content>
     <mat-card-actions>
-      <a mat-flat-button>View</a>
-      <a mat-flat-button>Edit</a>
-      <a mat-flat-button>Delete</a>
+      <div class="btnGroup">
+        <a mat-flat-button (click)="openDetail(item.itemId)">View</a>
+        <a mat-flat-button>Delete</a> <!-- click event to delete item -->
+        <a mat-flat-button>Lend Out</a> <!-- click event to lend out item, opens a modal -->
+      </div>
     </mat-card-actions>
   </mat-card>
 </section>

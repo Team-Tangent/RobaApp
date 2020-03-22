@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item.model';
+import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material';
+import { ItemCreateDialogComponent } from '../item-create-dialog/item-create-dialog.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-list',
@@ -7,7 +11,6 @@ import { Item } from '../item.model';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
-
   items: Item[] = [
     {
     itemId: 1,
@@ -46,7 +49,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
     },
     {
-      itemId: 2,
+      itemId: 4,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -58,7 +61,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
-      itemId: 2,
+      itemId: 5,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -70,7 +73,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 2,
+      itemId: 6,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -82,7 +85,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
     },
     {
-      itemId: 2,
+      itemId: 7,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -94,7 +97,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
-      itemId: 2,
+      itemId: 8,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -106,7 +109,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
-      itemId: 2,
+      itemId: 9,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -118,7 +121,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 2,
+      itemId: 10,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -130,7 +133,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 2,
+      itemId: 11,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -142,7 +145,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
-      itemId: 2,
+      itemId: 12,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -154,7 +157,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 2,
+      itemId: 13,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -166,7 +169,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 2,
+      itemId: 14,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -178,7 +181,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
-      itemId: 2,
+      itemId: 15,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -190,7 +193,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 2,
+      itemId: 16,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -203,9 +206,28 @@ export class ItemListComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+
+
+  constructor(
+    private route: Router,
+    public dialog: MatDialog,
+  ) { }
 
   ngOnInit() {
+  }
+
+  addItem(){
+    const dialogRef = this.dialog.open(ItemCreateDialogComponent, {
+      width: '300px',
+      height: '400px',
+      data: null,
+    });
+  }
+
+  openDetail(item){
+    if(item.itemId){
+      this.route.navigate([`./items/${item.itemId}`]);
+    }
   }
 
 }

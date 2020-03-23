@@ -1,8 +1,4 @@
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+@import '../../../styles.scss';
 
 .item-card-container {
   display: flex;
@@ -13,19 +9,24 @@ header {
   justify-content: space-evenly;
 }
 
-mat-card-header {
-  justify-content: center;
-}
+// mat-card-header {
+//   justify-content: center;
+//   width: 100%
+// }
 
 .item-card {
   margin: 10px 10px;
-  width: 200px;
-  justify-content: center;
+  width: 240px;
 }
 
-.card-image img {
-  max-height: 200px;
-  max-width: 240px;
+.addButton {
+    margin: auto 1rem;
+        mat-icon {
+            margin-top: -.75rem;
+        }
 }
 
-
+.btnGroup {
+    display: flex;
+    justify-content: space-evenly;
+}

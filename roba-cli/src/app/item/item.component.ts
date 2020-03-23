@@ -10,13 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ItemComponent implements OnInit {
   itemId: number;
+  itemName: string;
+  image: string;
   item: Item;
-  //detailForm: FormGroup;
-
 
   constructor(
-    //private fb: FormBuilder,
-    //private itemService: ItemService,
     private route: ActivatedRoute,
   ) { }
 

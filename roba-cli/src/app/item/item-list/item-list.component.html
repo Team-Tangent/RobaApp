@@ -1,16 +1,14 @@
 <header>
   <h1>Items</h1>
-  <button class="addButton" mat-fab>
+  <button class="addButton" mat-mini-fab>
     <mat-icon aria-label="Add Item" (click)="addItem()">+</mat-icon>
   </button>
 </header>
-<section class="item-card-container">
+<section class="container">
   <mat-card class="item-card" *ngFor="let item of items">
-    <mat-card-header>
-      <div class="card-image">
-        <img mat-card-image src={{item.image}} />
-      </div>
-    </mat-card-header>
+    <div class="card-image">
+      <img mat-card-image src={{item.image}} />
+    </div>
     <mat-card-content class="card-content">
       <mat-card-title>
         {{item.itemName}}

@@ -22,7 +22,7 @@ export class ItemListComponent implements OnInit {
     canBeBorrowed: true,
     borrowedDate: '3/11/2020',
     returnDate: '3/11/2020',
-    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
       },
       {
       itemId: 2,
@@ -46,7 +46,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
     },
     {
       itemId: 4,
@@ -82,7 +82,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     },
     {
       itemId: 7,
@@ -94,7 +94,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
     },
     {
       itemId: 8,
@@ -106,7 +106,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
       itemId: 9,
@@ -130,7 +130,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     },
     {
       itemId: 11,
@@ -142,7 +142,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
     },
     {
       itemId: 12,
@@ -154,7 +154,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
       itemId: 13,
@@ -178,7 +178,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     },
     {
       itemId: 15,
@@ -190,7 +190,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
     },
     {
       itemId: 16,
@@ -202,7 +202,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
   ];
 

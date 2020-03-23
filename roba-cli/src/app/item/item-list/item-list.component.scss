@@ -1,31 +1,13 @@
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.item-card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
-  justify-content: space-evenly;
-}
-
-mat-card-header {
-  justify-content: center;
-}
+@import '../../../styles.scss';
 
 .item-card {
   margin: 10px 10px;
-  width: 200px;
-  justify-content: center;
+  width: 240px;
 }
 
-.card-image img {
-  max-height: 200px;
-  max-width: 240px;
+.addButton {
+    margin: auto 1rem;
+        mat-icon {
+            margin-top: -.75rem;
+        }
 }
-
-

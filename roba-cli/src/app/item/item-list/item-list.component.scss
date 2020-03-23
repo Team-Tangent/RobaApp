@@ -1,19 +1,5 @@
 @import '../../../styles.scss';
 
-.item-card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
-  justify-content: space-evenly;
-}
-
-// mat-card-header {
-//   justify-content: center;
-//   width: 100%
-// }
-
 .item-card {
   margin: 10px 10px;
   width: 240px;

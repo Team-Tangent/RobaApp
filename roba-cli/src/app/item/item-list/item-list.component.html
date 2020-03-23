@@ -4,13 +4,11 @@
     <mat-icon aria-label="Add Item" (click)="addItem()">+</mat-icon>
   </button>
 </header>
-<section class="item-card-container">
+<section class="container">
   <mat-card class="item-card" *ngFor="let item of items">
     <div class="card-image">
       <img mat-card-image src={{item.image}} />
     </div>
-    <!-- <mat-card-header>
-        </mat-card-header> -->
     <mat-card-content class="card-content">
       <mat-card-title>
         {{item.itemName}}

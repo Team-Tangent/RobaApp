@@ -18,6 +18,7 @@ export class ItemService {
   }
 
   delete(item: Item): Observable<Item> {
+    // return this.http.delete<Item>('/api/item/delete, item);
     return;
   }
 

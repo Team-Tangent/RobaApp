@@ -224,6 +224,14 @@ export class ItemListComponent implements OnInit {
     });
   }
 
+  deleteItem(id){
+    alert("Item will be deleted, functionality coming soon", id);
+  }
+
+  lendOut(id){
+    alert("You're lending your stuff out!", id);
+  }
+
   openDetail(item){
     if(item.itemId){
       this.route.navigate([`./items/${item.itemId}`]);

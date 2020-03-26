@@ -49,6 +49,8 @@ body {
 	opacity: 0.2;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 	transition: opacity 0.3s, transform 0.3s;
+    width: 60px;
+    height: 60px;
 }
 
 .thumb-nav__item--current img,
@@ -290,6 +292,7 @@ body {
 	font-size: 4em;
 	font-family: "Playfair Display", Georgia, serif;
 	line-height: 1;
+    color: white;
 }
 
 .intro__subtitle {

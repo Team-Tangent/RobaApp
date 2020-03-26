@@ -26,4 +26,14 @@
     </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\demo.css" />
+    <Content Remove="wwwroot\css\layout-simple.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\multi-layout.html" />
+  </ItemGroup>
 </Project>

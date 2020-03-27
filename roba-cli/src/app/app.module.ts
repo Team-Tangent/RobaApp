@@ -16,7 +16,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedImportsModule } from './shared/shared-imports.module';
-<<<<<<< HEAD
 import { AccountModule } from './account/account.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -29,25 +28,16 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { environment } from '../environments/environment';
 
-=======
-import { ItemComponent } from './item/item.component';
-import { LandAppComponent } from './land-app/land-app.component';
->>>>>>> 75e102d9bce2a3338503f76cdbf72f6753545f14
 
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
     AppNavComponent,
-<<<<<<< HEAD
     LandingPageComponent,
     LandComponent
 
 
-=======
-    ItemComponent,
-    LandAppComponent
->>>>>>> 75e102d9bce2a3338503f76cdbf72f6753545f14
   ],
   imports: [
     BrowserModule,

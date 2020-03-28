@@ -41,6 +41,9 @@ body {
 	border: 2px solid #fff;
 	border-radius: 50%;
 	color: #fff;
+    width: 60px;
+    height: 60px;
+   
 }
 
 .thumb-nav__item img {
@@ -284,6 +287,7 @@ body {
 	padding: 1.8em;
 	width: 100%;
 	font-size: 1.15em;
+    color: white;
 }
 
 .intro__title {

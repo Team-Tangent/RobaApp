@@ -224,12 +224,12 @@ export class ItemListComponent implements OnInit {
     });
   }
 
-  deleteItem(id){
-    alert("Item will be deleted, functionality coming soon", id);
+  deleteItem(){
+    alert("Item will be deleted, functionality coming soon");
   }
 
-  lendOut(id){
-    alert("You're lending your stuff out!", id);
+  lendOut(){
+    alert("You're lending your stuff out!");
   }
 
   openDetail(item){

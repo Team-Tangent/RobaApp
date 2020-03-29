@@ -1,0 +1,26 @@
+@import '../../styles.scss';
+
+mat-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 25rem;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.editContent {
+    height: 175px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+        margin-left: .5rem;
+    }
+}

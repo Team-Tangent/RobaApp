@@ -1,29 +1,18 @@
-<header>
-  <h1>Items</h1>
-  <button class="addButton" mat-mini-fab>
-    <mat-icon aria-label="Add Item" (click)="addItem()">+</mat-icon>
-  </button>
-</header>
-<section class="container">
+<section class="item-card-container">
   <mat-card class="item-card" *ngFor="let item of items">
-    <div class="card-image">
-      <img mat-card-image src={{item.image}} />
-    </div>
-    <mat-card-content class="card-content">
-      <mat-card-title>
-        {{item.itemName}}
-      </mat-card-title>
-      <mat-card-subtitle>
-        {{item.lentOut ? item.lentTo + ' has it!' : 'Created on ' + item.createdOnDate }}
+    <mat-card-header>
+      <mat-card-title>{{item.itemName}}</mat-card-title>
+      <mat-card-subtitle>{{item.lentOut ? item.lentTo + ' has it!' : 'Created on ' + item.createdOnDate }}
       </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <div class="card-image">
+        <img mat-card-image src={{item.image}} />
+      </div>
     </mat-card-content>
     <mat-card-actions>
-      <div class="btnGroup">
-        <a mat-flat-button (click)="openDetail(item)">View</a>
-        <a mat-flat-button (click)="deleteItem(item.itemId)">Delete</a> <!-- click event to delete item -->
-        <a mat-flat-button (click)="lendOut(item.itemId)">Lend Out</a>
-        <!-- click event to lend out item, opens a modal -->
-      </div>
+      <a mat-flat-button>Edit</a>
+      <a mat-flat-button>Delete</a>
     </mat-card-actions>
   </mat-card>
 </section>

@@ -12,16 +12,11 @@ const routes: Routes = [
     component: ItemListComponent,
     canActivate: [AuthenticatedGuard]
   },
-  {
-    path: ':id',
-    pathMatch: 'full',
-    component: ItemComponent,
-    canActivate: [AuthenticatedGuard]
-  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
+
   exports: [RouterModule]
 })
 export class ItemRoutingModule { }

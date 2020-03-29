@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item.model';
-import { Observable } from 'rxjs';
-import { MatDialog } from '@angular/material';
-import { ItemCreateDialogComponent } from '../item-create-dialog/item-create-dialog.component';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-item-list',
@@ -11,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
+
   items: Item[] = [
     {
     itemId: 1,
@@ -22,7 +19,7 @@ export class ItemListComponent implements OnInit {
     canBeBorrowed: true,
     borrowedDate: '3/11/2020',
     returnDate: '3/11/2020',
-    image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+    image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
       },
       {
       itemId: 2,
@@ -46,10 +43,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80"
     },
     {
-      itemId: 4,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -61,7 +58,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
-      itemId: 5,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -73,7 +70,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 6,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -82,10 +79,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
     },
     {
-      itemId: 7,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -94,10 +91,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
-      itemId: 8,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -106,10 +103,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
-      itemId: 9,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -121,7 +118,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 10,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -130,22 +127,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 11,
-      itemName: 'book',
-      createdOnDate: '3/11/2020',
-      ownerId: 1,
-      lentOut: true,
-      lentTo: 'Greg',
-      canBeBorrowed: true,
-      borrowedDate: '3/11/2020',
-      returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
-    },
-    {
-      itemId: 12,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -157,7 +142,19 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     },
     {
-      itemId: 13,
+      itemId: 2,
+      itemName: 'book',
+      createdOnDate: '3/11/2020',
+      ownerId: 1,
+      lentOut: true,
+      lentTo: 'Greg',
+      canBeBorrowed: true,
+      borrowedDate: '3/11/2020',
+      returnDate: '3/11/2020',
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+    },
+    {
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -169,7 +166,7 @@ export class ItemListComponent implements OnInit {
       image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 14,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -178,10 +175,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     },
     {
-      itemId: 15,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -190,10 +187,10 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
     {
-      itemId: 16,
+      itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
       ownerId: 1,
@@ -202,40 +199,13 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
     },
   ];
 
-
-
-  constructor(
-    private route: Router,
-    public dialog: MatDialog,
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  addItem(){
-    const dialogRef = this.dialog.open(ItemCreateDialogComponent, {
-      width: '300px',
-      height: '400px',
-      data: null,
-    });
-  }
-
-  deleteItem(id){
-    alert("Item will be deleted, functionality coming soon", id);
-  }
-
-  lendOut(id){
-    alert("You're lending your stuff out!", id);
-  }
-
-  openDetail(item){
-    if(item.itemId){
-      this.route.navigate([`./items/${item.itemId}`]);
-    }
   }
 
 }

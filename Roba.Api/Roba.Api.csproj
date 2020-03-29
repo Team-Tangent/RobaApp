@@ -26,4 +26,20 @@
     </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\demo.css" />
+    <Content Remove="wwwroot\css\layout-simple.css" />
+    <Content Remove="wwwroot\css\normalize.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\multi-layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="wwwroot\css\normalize.css">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Compile>
+  </ItemGroup>
 </Project>

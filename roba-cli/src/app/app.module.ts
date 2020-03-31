@@ -28,16 +28,18 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { environment } from '../environments/environment';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     AppDashboardComponent,
     AppNavComponent,
     LandingPageComponent,
+<<<<<<< HEAD
     LandComponent
 
 
+=======
+>>>>>>> dev2
   ],
   imports: [
     BrowserModule,

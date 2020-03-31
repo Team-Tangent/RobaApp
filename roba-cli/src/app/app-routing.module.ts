@@ -7,7 +7,7 @@ import { LandComponent } from './land/land.component';
 const routes: Routes = [
   {
     path: '',
-    component: LandingPageComponent,
+    redirectTo:'items',
     pathMatch: 'full'
   },
   {

@@ -1,1 +1,38 @@
-<p>item works!</p>
+<div class="container">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="detailForm" novalidate>
+                <section>
+                    <div class="card-image">
+                        <!-- <img mat-card-image src={{item.image}} /> -->
+                        <img mat-card-image
+                            src="https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" />
+                    </div>
+                    <section class="editContent">
+                        <mat-form-field>
+                            <input matInput placeholder="Item Name" formControlName="itemName" name="itemName">
+                            <mat-error>Item Name is Required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Item Image" formControlName="itemImage" name="itemImage">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-select placeholder="Item Type" formControlName="itemType" name="itemType">
+                                <mat-option value="VideoGame">Video Game</mat-option>
+                                <mat-option value="Book">Book</mat-option>
+                                <mat-option value="Movie">Movie</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </section>
+                </section>
+            </form>
+        </mat-card-content>
+        <mat-card-actions class="btns">
+            <button mat-raised-button (click)="save()">Save</button>
+            <a mat-mini-fab routeLinkActive="selected" [routerLink]="['']">
+                <mat-icon>keyboard_backspace</mat-icon>
+            </a>
+            <!-- <button mat-raised-button disabled (click)="save()">Delete</button> -->
+        </mat-card-actions>
+    </mat-card>
+</div>

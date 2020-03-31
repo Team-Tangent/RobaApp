@@ -13,18 +13,18 @@ import { Router } from '@angular/router';
 export class ItemListComponent implements OnInit {
   items: Item[] = [
     {
-    itemId: 1,
-    itemName: 'DVD',
-    createdOnDate: '3/11/2020',
-    ownerId: 1,
-    lentOut: false,
-    lentTo: '',
-    canBeBorrowed: true,
-    borrowedDate: '3/11/2020',
-    returnDate: '3/11/2020',
-    image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
-      },
-      {
+      itemId: 1,
+      itemName: 'DVD',
+      createdOnDate: '3/11/2020',
+      ownerId: 1,
+      lentOut: false,
+      lentTo: '',
+      canBeBorrowed: true,
+      borrowedDate: '3/11/2020',
+      returnDate: '3/11/2020',
+      image: 'https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
+    },
+    {
       itemId: 2,
       itemName: 'book',
       createdOnDate: '3/11/2020',
@@ -34,7 +34,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
     },
     {
       itemId: 3,
@@ -46,7 +46,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: 'https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80',
     },
     {
       itemId: 4,
@@ -58,7 +58,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: 'https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     },
     {
       itemId: 5,
@@ -70,7 +70,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: 'https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
     },
     {
       itemId: 6,
@@ -82,7 +82,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
     },
     {
       itemId: 7,
@@ -94,7 +94,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: 'https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80',
     },
     {
       itemId: 8,
@@ -106,7 +106,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: 'https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     },
     {
       itemId: 9,
@@ -118,7 +118,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: 'https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
     },
     {
       itemId: 10,
@@ -130,7 +130,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
     },
     {
       itemId: 11,
@@ -142,7 +142,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: 'https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80',
     },
     {
       itemId: 12,
@@ -154,7 +154,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: 'https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     },
     {
       itemId: 13,
@@ -166,7 +166,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      image: 'https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
     },
     {
       itemId: 14,
@@ -178,7 +178,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
     },
     {
       itemId: 15,
@@ -190,7 +190,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80",
+      image: 'https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80',
     },
     {
       itemId: 16,
@@ -202,7 +202,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
-      image: "https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      image: 'https://images.unsplash.com/photo-1501003878151-d3cb87799705?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     },
   ];
 
@@ -216,7 +216,7 @@ export class ItemListComponent implements OnInit {
   ngOnInit() {
   }
 
-  addItem(){
+  addItem() {
     const dialogRef = this.dialog.open(ItemCreateDialogComponent, {
       width: '300px',
       height: '400px',
@@ -224,16 +224,16 @@ export class ItemListComponent implements OnInit {
     });
   }
 
-  deleteItem(id){
-    alert("Item will be deleted, functionality coming soon", id);
+  deleteItem(id) {
+    alert('Item will be deleted, functionality coming soon', id);
   }
 
-  lendOut(id){
-    alert("You're lending your stuff out!", id);
+  lendOut(id) {
+    alert('You\'re lending your stuff out!');
   }
 
-  openDetail(item){
-    if(item.itemId){
+  openDetail(item) {
+    if (item.itemId) {
       this.route.navigate([`./items/${item.itemId}`]);
     }
   }

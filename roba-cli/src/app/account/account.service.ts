@@ -101,7 +101,7 @@ export class AccountService {
       },
       resp => {
         console.error(resp);
-        this.snackBar.open(resp.error.message, 'Ok');
+        this.snackBar.open("Error occured during login", 'Ok');
         if (navigate) {
           this.router.navigate(['not-authorized']);
         }

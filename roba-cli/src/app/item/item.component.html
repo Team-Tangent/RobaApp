@@ -10,14 +10,17 @@
                     </div>
                     <section class="editContent">
                         <mat-form-field>
-                            <input matInput placeholder="Item Name" formControlName="itemName" name="itemName">
+                            <mat-label>Item Name</mat-label>
+                            <input matInput formControlName="itemName" name="itemName">
                             <mat-error>Item Name is Required</mat-error>
                         </mat-form-field>
                         <mat-form-field>
-                            <input matInput placeholder="Item Image" formControlName="itemImage" name="itemImage">
+                            <mat-label>Enter an image URL</mat-label>
+                            <input matInput formControlName="image" name="image">
                         </mat-form-field>
                         <mat-form-field>
-                            <mat-select placeholder="Item Type" formControlName="itemType" name="itemType">
+                            <mat-label>Item Type</mat-label>
+                            <mat-select formControlName="itemType" name="itemType">
                                 <mat-option value="VideoGame">Video Game</mat-option>
                                 <mat-option value="Book">Book</mat-option>
                                 <mat-option value="Movie">Movie</mat-option>

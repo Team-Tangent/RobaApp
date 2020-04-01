@@ -82,6 +82,7 @@ export class ItemListComponent implements OnInit {
       canBeBorrowed: true,
       borrowedDate: '3/11/2020',
       returnDate: '3/11/2020',
+      // tslint:disable-next-line: max-line-length
       image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
     },
     {

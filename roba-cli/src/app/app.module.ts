@@ -34,12 +34,6 @@ import { environment } from '../environments/environment';
     AppDashboardComponent,
     AppNavComponent,
     LandingPageComponent,
-<<<<<<< HEAD
-    LandComponent
-
-
-=======
->>>>>>> dev2
   ],
   imports: [
     BrowserModule,

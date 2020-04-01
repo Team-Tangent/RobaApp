@@ -5,7 +5,7 @@
   </button>
 </header>
 <section class="container">
-  <mat-card class="item-card" *ngFor="let item of items">
+  <mat-card class="item-card" *ngFor="let item of items$ | async">
     <div class="card-image">
       <img mat-card-image src={{item.image}} />
     </div>
@@ -20,8 +20,8 @@
     <mat-card-actions>
       <div class="btnGroup">
         <a mat-flat-button (click)="openDetail(item)">View</a>
-        <a mat-flat-button (click)="deleteItem(item.itemId)">Delete</a> <!-- click event to delete item -->
-        <a mat-flat-button (click)="lendOut(item.itemId)">Lend Out</a>
+        <a mat-flat-button (click)="deleteItem(item)">Delete</a> <!-- click event to delete item -->
+        <a mat-flat-button (click)="lendOut(item.itemId)">{{item.lentOut ? 'Return' : 'Lend Out'}}</a>
         <!-- click event to lend out item, opens a modal -->
       </div>
     </mat-card-actions>

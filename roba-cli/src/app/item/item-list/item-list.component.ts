@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material';
 import { ItemCreateDialogComponent } from '../item-create-dialog/item-create-dialog.component';
 import { Router } from '@angular/router';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-item-list',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
+<<<<<<< HEAD
   items: Item[] = [
     {
       itemId: 1,
@@ -208,13 +210,23 @@ export class ItemListComponent implements OnInit {
   ];
 
 
+=======
+  
+  items$: Observable<Item[]>;
+>>>>>>> dev2
 
   constructor(
     private route: Router,
     public dialog: MatDialog,
+    public itemService: ItemService,
   ) { }
 
   ngOnInit() {
+    this.search();
+  }
+
+  search(){
+    this.items$ = this.itemService.search('');
   }
 
   addItem() {
@@ -223,14 +235,33 @@ export class ItemListComponent implements OnInit {
       height: '400px',
       data: null,
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result){
+        return;
+      }
+      return this.itemService.save(result).subscribe( _ => this.search()); 
+      //_ means not using it for the result ^
+    });
   }
 
+<<<<<<< HEAD
   deleteItem(id) {
     alert('Item will be deleted, functionality coming soon', id);
   }
 
   lendOut(id) {
     alert('You\'re lending your stuff out!');
+=======
+  deleteItem(item: Item){
+    this.itemService.delete(item).subscribe((bool: boolean) => {
+      this.search();
+    })
+  }
+
+  lendOut(){
+    alert("You're lending your stuff out!");
+>>>>>>> dev2
   }
 
   openDetail(item) {

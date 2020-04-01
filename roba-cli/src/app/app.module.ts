@@ -19,7 +19,6 @@ import { SharedImportsModule } from './shared/shared-imports.module';
 import { AccountModule } from './account/account.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LandComponent } from './land/land.component';
 import { StoreModule } from '@ngrx/store';
 import { layoutFeatureKey, layoutReducer } from './store/layout.store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';

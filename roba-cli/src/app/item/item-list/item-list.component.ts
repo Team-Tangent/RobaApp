@@ -12,7 +12,10 @@ import { ItemService } from '../item.service';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
+  
+  items$: Observable<Item[]>;
+=========
   items: Item[] = [
     {
       itemId: 1,
@@ -210,10 +213,7 @@ export class ItemListComponent implements OnInit {
   ];
 
 
-=======
-  
-  items$: Observable<Item[]>;
->>>>>>> dev2
+>>>>>>>>> Temporary merge branch 2
 
   constructor(
     private route: Router,
@@ -229,7 +229,7 @@ export class ItemListComponent implements OnInit {
     this.items$ = this.itemService.search('');
   }
 
-  addItem() {
+  addItem(){
     const dialogRef = this.dialog.open(ItemCreateDialogComponent, {
       width: '300px',
       height: '400px',
@@ -245,14 +245,7 @@ export class ItemListComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
-  deleteItem(id) {
-    alert('Item will be deleted, functionality coming soon', id);
-  }
-
-  lendOut(id) {
-    alert('You\'re lending your stuff out!');
-=======
+<<<<<<<<< Temporary merge branch 1
   deleteItem(item: Item){
     this.itemService.delete(item).subscribe((bool: boolean) => {
       this.search();
@@ -261,7 +254,9 @@ export class ItemListComponent implements OnInit {
 
   lendOut(){
     alert("You're lending your stuff out!");
->>>>>>> dev2
+=========
+  deleteItem(id) {
+    alert('Item will be deleted, functionality coming soon', id);
   }
 
   openDetail(item) {

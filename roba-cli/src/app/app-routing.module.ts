@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthenticatedGuard } from './account/authenticated.guard';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {
@@ -10,7 +8,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-
     path: 'items',
     loadChildren: () => import('./item/item.module').then(m => m.ItemModule)
   },

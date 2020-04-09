@@ -16,17 +16,17 @@ using Roba.Api.Models.Auth;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Roba.Api.ApiControllers {
-    public class : Controller {
+    public class AuthController : Controller {
         private readonly UserManager<RobaIdentityUser> _userManager;
         private readonly IJwtFactory _jwtFactory;
         private readonly IConfiguration _configuration;
-        private readonly ILogger<> _logger;
+        private readonly ILogger<AuthController> _logger;
         private readonly MicrosoftAuthSettings _microsoftAuthSettings;
 
-        public (UserManager<RobaIdentityUser> userManager,
+        public AuthController (UserManager<RobaIdentityUser> userManager,
             IJwtFactory jwtFactory,
             IConfiguration configuration,
-            ILogger<> logger,
+            ILogger<AuthController> logger,
             IOptions<MicrosoftAuthSettings> microsoftAuthSettings) {
             _userManager = userManager;
             _jwtFactory = jwtFactory;
@@ -46,7 +46,7 @@ namespace Roba.Api.ApiControllers {
 
         [HttpPost ("external/microsoft")]
         public async Task<IActionResult> PostMicrosoft ([FromBody] MicrosoftAuthViewModel model) {
-            var verifier = new MicrosoftAuthVerifier<> (_microsoftAuthSettings, _configuration["HttpHost"] + (model.BaseHref ?? "/"), _logger);
+            var verifier = new MicrosoftAuthVerifier<AuthController> (_microsoftAuthSettings, _configuration["HttpHost"] + (model.BaseHref ?? "/"), _logger);
             var profile = await verifier.AcquireUser (model.AccessToken);
 
             if (!profile.IsSuccessful) {

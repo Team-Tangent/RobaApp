@@ -10,13 +10,13 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     component: ItemListComponent,
-    canActivate: [AuthenticatedGuard]
+    //canActivate: [AuthenticatedGuard]
   },
   {
     path: ':id',
     pathMatch: 'full',
     component: ItemComponent,
-    canActivate: [AuthenticatedGuard]
+    // canActivate: [AuthenticatedGuard]
   },
 ];
 

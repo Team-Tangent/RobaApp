@@ -100,7 +100,7 @@ body {
 	-webkit-transition: opacity 0.9s;
 	transition: opacity 0.9s;
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .container--animOutRight::after,
@@ -294,9 +294,9 @@ body {
 	margin: 0 0 20px;
 	font-weight: 900;
 	font-size: 4em;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: "serif", Georgia, Playfair Display;
 	line-height: 1;
-    color: white;
+	color: white;
 }
 
 .intro__subtitle {
@@ -424,7 +424,7 @@ body {
 	padding: 1em;
 	color: #dbdbdb;
 	font-size: 1.85em;
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: "serif", Georgia, Playfair Display;
 	line-height: 1;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;

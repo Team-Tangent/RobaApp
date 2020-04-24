@@ -10,5 +10,6 @@ export interface Item {
   canBeBorrowed: boolean;
   borrowedDate: string;
   returnDate: string;
-  image: string;
+  imageFileContent: string;
+  imageFileType: string;
 }

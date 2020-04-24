@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,15 +16,18 @@ namespace Roba.Api.ApiControllers
     {
         private readonly IItemData _itemData;
         private readonly IUrlHelper _urlHelper;
+        private readonly UserManager<RobaIdentityUser> _userManager;
         public ItemController(
             IItemData itemData,
-            IUrlHelper urlHelper)
+            IUrlHelper urlHelper,
+            UserManager<RobaIdentityUser> userManager)
         {
             _itemData = itemData;
             _urlHelper = urlHelper;
+            _userManager = userManager;
         }
 
-        //  ./api/item/:id
+        //  ./api/items/:id
         [HttpGet("{ItemId}")]
         public IActionResult GetSingleItem(int id)
         {
@@ -32,8 +37,21 @@ namespace Roba.Api.ApiControllers
 
         // GET api/items/:id
         //GET ALL Items for a Single USER
-        [HttpGet("{UserId}/user")]
-        public IActionResult GetAllItemsForUser(int userId)
+        [HttpGet("user/currentUser")]
+        public async Task<IActionResult> GetAllItemsForUser()
+        {
+        
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                var userId = user.Id;
+
+                var items = _itemData.GetAllItemsForUser(userId);
+            return Ok(items);
+        }
+
+        // GET api/items/:id
+        //GET ALL Items for a Single USER
+        [HttpGet("user/{UserId}")]
+        public IActionResult GetAllItemsForUser(Guid userId)
         {
             var items = _itemData.GetAllItemsForUser(userId);
             return Ok(items);

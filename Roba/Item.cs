@@ -6,7 +6,7 @@ namespace Roba
         public int ItemId { get; set; }
         public string ItemName { get; set; }
         public DateTime CreatedOnDate { get; set; }
-        public int Owner { get; set; }
+        public Guid Owner { get; set; }
         public bool LentOut { get; set; }
         public bool CanBeBorrowed { get; set; }
         public DateTime BorrowedDate { get; set; }

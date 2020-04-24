@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,10 +13,13 @@ namespace Roba.Api.ApiControllers
     public class ItemController : Controller
     {
         private readonly IItemData _itemData;
-
-        public ItemController(IItemData itemData)
+        private readonly IUrlHelper _urlHelper;
+        public ItemController(
+            IItemData itemData,
+            IUrlHelper urlHelper)
         {
             _itemData = itemData;
+            _urlHelper = urlHelper;
         }
 
         //  ./api/item/:id
@@ -29,15 +33,15 @@ namespace Roba.Api.ApiControllers
         // GET api/items/:id
         //GET ALL Items for a Single USER
         [HttpGet("{UserId}/user")]
-        public IActionResult GetAllItemsForUser(int UserId)
+        public IActionResult GetAllItemsForUser(int userId)
         {
-            var items = _itemData.GetAllItemsForUser(UserId);
+            var items = _itemData.GetAllItemsForUser(userId);
             return Ok(items);
         }
 
         // POST api/<controller>
-        [HttpPost]
-        public IActionResult AddItem(Item model)
+        [HttpPost("")]
+        public IActionResult AddItem([FromBody]Item model)
         {
             if (model == null)
             {
@@ -47,7 +51,7 @@ namespace Roba.Api.ApiControllers
             {
                 ItemName = model.ItemName,
                 Owner = model.Owner,
-                CreatedOnDate = DateTime.Now,
+                CreatedOnDate = model.CreatedOnDate,
                 CanBeBorrowed = model.CanBeBorrowed,
                 LentOut = model.LentOut,
                 ImageFileContent = model.ImageFileContent,

@@ -15,4 +15,4 @@ namespace Roba
         public string ImageFileType { get; set; }
 
     }
-}
+} 

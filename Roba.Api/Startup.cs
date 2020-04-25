@@ -165,14 +165,14 @@ namespace Roba.Api
             //services.AddDefaultIdentity<IdentityUser>()
             //    .AddDefaultUI(UIFramework.Bootstrap4)
             //    .AddEntityFrameworkStores<RobaIdentityDbContext>();
-                
-            //services.AddDbContext<RobaIdentityDbContext>(options =>
-            //    options.UseSqlServer(
-            //        Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<RobaDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
 
 
             services.AddSingleton<IJwtFactory, JwtFactory>();
-           // services.AddScoped<>(); Add later
+            services.AddScoped<IItemData, SqlItemData>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IUrlHelper, UrlHelper>(factory =>
             {

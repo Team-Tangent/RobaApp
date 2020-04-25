@@ -4,11 +4,12 @@ export interface Item {
   itemId: number;
   itemName: string;
   createdOnDate: string;
-  ownerId: number;
+  ownerId: string;
   lentOut: boolean;
   lentTo: string;
   canBeBorrowed: boolean;
   borrowedDate: string;
   returnDate: string;
-  image: string;
+  imageFileContent: string;
+  imageFileType: string;
 }

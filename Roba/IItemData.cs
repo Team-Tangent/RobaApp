@@ -9,7 +9,7 @@ namespace Roba
         /// Gets a single Item by id
         /// </summary>
         Item GetItemById(int ItemId);
-        List<Item> GetAllItemsForUser(int UserId);
+        List<Item> GetAllItemsForUser(Guid UserId);
 
         void AddItem(Item item);    
 

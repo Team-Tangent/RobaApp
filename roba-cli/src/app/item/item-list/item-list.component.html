@@ -7,7 +7,7 @@
 <section class="container">
   <mat-card class="item-card" *ngFor="let item of items$ | async">
     <div class="card-image">
-      <img mat-card-image src={{item.image}} />
+      <img mat-card-image src={{item.imageFileContent}} />
     </div>
     <mat-card-content class="card-content">
       <mat-card-title>

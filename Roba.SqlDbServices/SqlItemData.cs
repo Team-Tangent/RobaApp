@@ -24,7 +24,7 @@ namespace Roba.SqlDbServices
             context.Remove(item);
         }
 
-        public List<Item> GetAllItemsForUser(int UserId)
+        public List<Item> GetAllItemsForUser(Guid UserId)
         {
             return context.Items.Where(x => x.Owner == UserId).ToList();
         }

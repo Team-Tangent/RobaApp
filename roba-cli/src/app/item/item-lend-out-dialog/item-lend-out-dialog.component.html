@@ -1,0 +1,12 @@
+<mat-dialog-content>
+    <h3>Who are you lending your item to?</h3>
+    <form [formGroup]="detailForm" novalidate>
+        <mat-form-field>
+            <input matInput formControlName="lendTo" name="lendTo" required>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="btnGroup">
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button (click)="save()" color="accent">Save</button>
+</mat-dialog-actions>

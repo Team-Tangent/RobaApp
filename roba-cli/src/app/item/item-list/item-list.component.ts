@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material';
 import { ItemCreateDialogComponent } from '../item-create-dialog/item-create-dialog.component';
 import { Router } from '@angular/router';
 import { ItemService } from '../item.service';
+import { ItemLendOutDialogComponent } from '../item-lend-out-dialog/item-lend-out-dialog.component';
 
 @Component({
   selector: 'app-item-list',
@@ -46,7 +47,6 @@ export class ItemListComponent implements OnInit {
     });
   }
 
-
   deleteItem(item: Item) {
     this.itemService.delete(item).subscribe((bool: boolean) => {
       this.search();
@@ -54,7 +54,19 @@ export class ItemListComponent implements OnInit {
   }
 
   lendOut() {
-    alert("You're lending your stuff out!");
+    const dialogRef = this.dialog.open(ItemLendOutDialogComponent, {
+      width: '300px',
+      height: '300px',
+      data: null,
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) {
+        return;
+      }
+      return this.itemService.save(result).subscribe(_ => this.search());
+      //_ means not using it for the result ^
+    });
   }
   openDetail(item) {
     if (item.itemId) {

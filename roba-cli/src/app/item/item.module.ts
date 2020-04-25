@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ItemCreateDialogComponent } from './item-create-dialog/item-create-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ItemService } from './item.service';
+import { ItemLendOutDialogComponent } from './item-lend-out-dialog/item-lend-out-dialog.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ItemService } from './item.service';
     ItemComponent,
     ItemListComponent,
     ItemCreateDialogComponent,
+    ItemLendOutDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { ItemService } from './item.service';
   ],
   entryComponents : [
     ItemCreateDialogComponent,
+    ItemLendOutDialogComponent,
   ]
 })
 export class ItemModule { }

@@ -4,26 +4,24 @@ import { Item } from '../item.model';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-item-create-dialog',
-  templateUrl: './item-create-dialog.component.html',
-  styleUrls: ['./item-create-dialog.component.scss']
+  selector: 'app-item-lend-out-dialog',
+  templateUrl: './item-lend-out-dialog.component.html',
+  styleUrls: ['./item-lend-out-dialog.component.scss']
 })
-export class ItemCreateDialogComponent implements OnInit {
+export class ItemLendOutDialogComponent implements OnInit {
   detailForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-    public dialogRef: MatDialogRef<ItemCreateDialogComponent>,
+    public dialogRef: MatDialogRef<ItemLendOutDialogComponent>, 
     @Inject(MAT_DIALOG_DATA) public data: Item | null) {
       this.detailForm = this.fb.group({
-        itemName: ['',Validators.required],
-        image: [''],
-        itemType: ['VideoGame'],
-      });
-      if(this.data) {
+        lendTo: ['', Validators.required],
+      })
+      if(this.data){
         this.detailForm.patchValue(this.data);
       }
-    }
+     }
 
   ngOnInit() {
   }
@@ -37,8 +35,8 @@ export class ItemCreateDialogComponent implements OnInit {
       return;
     }
     //gather form data
-    const item = {...this.data, ...this.detailForm.value};
+    const item = {...this.data, ...this.detailForm.value, lentOut: true};
     this.dialogRef.close(item);
   }
-
+  
 }

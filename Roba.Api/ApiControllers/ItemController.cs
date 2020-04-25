@@ -113,6 +113,17 @@ namespace Roba.Api.ApiControllers
 
         }
 
+        ////LentTo api/item/:id
+        //[HttpPut("{id}")]
+        //public IActionResult ItemLendOut(Item item, Item model)
+        //{
+        //    if (model == null)
+        //    {
+        //        return BadRequest();
+        //    }
+            
+        //}
+
         // DELETE api/item/:id
         [HttpDelete("{id}")]
         public IActionResult DeleteItem(Item item)

@@ -73,6 +73,10 @@ body {
 	line-height: 65px;
 }
 
+.material-icons.md-48 {
+	font-size: 48px;
+}
+
 /* Container styles */
 .container,
 .container::after {
@@ -100,7 +104,7 @@ body {
 	-webkit-transition: opacity 0.9s;
 	transition: opacity 0.9s;
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .container--animOutRight::after,

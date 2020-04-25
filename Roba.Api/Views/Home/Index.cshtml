@@ -6,393 +6,401 @@
 
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Sliding Header Grid Layout (Multi)</title>
-		<meta name="description" content="A multi grid layout with an initial fullscreen intro" />
-		<meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
-	    <link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/layout-multi.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<svg class="hidden">
-			<g id="icon-grid">
-				<rect x="32.5" y="5.5" width="22" height="22"/>
-				<rect x="4.5" y="5.5" width="22" height="22"/>
-				<rect x="32.5" y="33.5" width="22" height="22"/>
-				<rect x="4.5" y="33.5" width="22" height="22"/>
-			</g>
-			<g id="icon-cross">
-				<line x1="4.5" y1="55.5" x2="54.953" y2="5.046"/>
-				<line x1="54.953" y1="55.5" x2="4.5" y2="5.047"/>
-			</g>
-		</svg>
-		<nav class="thumb-nav">
-			<a data-container="container-1" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb1.png" alt="thumb01" /><span>1</span></a>
-			<a data-container="container-2" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb2.png" alt="thumb02" /><span>2</span></a>
-			<a data-container="container-3" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb3.png" alt="thumb03" /><span>3</span></a>
-		</nav>
-		<div id="container-1" class="container theme-1">
-			<header class="intro">
-				<img class="intro__image" src="img/header01.jpg" alt="Books"/>
-				<div class="intro__content">
-					<h1 class="intro__title">It's Not Lost</h1>
-                
-					<div class="intro__subtitle">
-                        <h2>One of your best buddies has it, but which one?</h2>
-						<button class="trigger">
-							<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
-								<use class="icon icon--grid" xlink:href="#icon-grid" />
-								<use class="icon icon--cross" xlink:href="#icon-cross" />
-							</svg>
-							<span>Toggle content</span>
-						</button>
-					</div>
-				</div><!-- /intro__content -->
-			</header><!-- /intro -->
-			<section class="items-wrap">
-                <a href="#" class="item">
-                    <img class="item__image" src="img/item01.jpg" alt="item01" />
-                    <h2 class="item__title">You Love It</h2><br />
-                   </a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item02.jpg" alt="item02"/>
-					<h2 class="item__title">You Need It</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item03.jpg" alt="item03"/>
-					<h2 class="item__title">You Own It</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item04.jpg" alt="item04"/>
-					<h2 class="item__title">Where Is It???</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item05.jpg" alt="item05"/>
-					<h2 class="item__title">Your Tools</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item06.jpg" alt="item06"/>
-					<h2 class="item__title">Your Movies</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item07.jpg" alt="item07"/>
-					<h2 class="item__title">Your Video Games</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item08.jpg" alt="item08"/>
-					<h2 class="item__title">Your Girls Stuff</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item09.jpg" alt="item09"/>
-					<h2 class="item__title">Your Boy Stuff</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item10.jpg" alt="item10"/>
-					<h2 class="item__title">Your Precious</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item11.jpg" alt="item11"/>
-					<h2 class="item__title">Store it all easily, find it quickly</h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item12.jpg" alt="item12"/>
-					<h2 class="item__title">There is an app for that!</h2>
-				</a>
-			</section>
-		
-		</div><!-- /container -->
-		<div id="container-2" class="container theme-2">
-			<header class="intro">
-				<img class="intro__image" src="img/header02.jpg" alt="Road"/>
-				<div class="intro__content">
-					<h1 class="intro__title">It's On Loan</h1>
-					<div class="intro__subtitle">
-						<button class="trigger">
-							<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
-								<use class="icon icon--grid" xlink:href="#icon-grid" />
-								<use class="icon icon--cross" xlink:href="#icon-cross" />
-							</svg>
-							<span>Toggle content</span>
-						</button>
-					</div>
-				</div><!-- /intro__content -->
-			</header><!-- /intro -->
-			<section class="items-wrap">
-				<a href="#" class="item">
-					<img class="item__image" src="img/item01.jpg" alt="item01"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item02.jpg" alt="item02"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item03.jpg" alt="item03"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item04.jpg" alt="item04"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item05.jpg" alt="item05"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item06.jpg" alt="item06"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item07.jpg" alt="item07"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item08.jpg" alt="item08"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item09.jpg" alt="item09"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item10.jpg" alt="item10"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item11.jpg" alt="item11"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item12.jpg" alt="item12"/>
-					<h2 class="item__title"></h2>
-				</a>
-			</section>
-	
-		</div><!-- /container -->
-		<div id="container-3" class="container">
-			<header class="intro">
-				<img class="intro__image" src="img/header03.jpg" alt="Glacier"/>
-				<div class="intro__content">
-					<h1 class="intro__title">Roba</h1>
-                    <h2>The App That Keeps Track Of Your Sh**uff!</h2>
-					<div class="intro__subtitle">
-						<button class="trigger">
-							<svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
-								<use class="icon icon--grid" xlink:href="#icon-grid" />
-								<use class="icon icon--cross" xlink:href="#icon-cross" />
-							</svg>
-							<span>Toggle content</span>
-						</button>
-					</div>
-				</div><!-- /intro__content -->
-			</header><!-- /intro -->
-			<section class="items-wrap">
-				<a href="#" class="item">
-					<img class="item__image" src="img/item01.jpg" alt="item01"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item02.jpg" alt="item02"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item03.jpg" alt="item03"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item04.jpg" alt="item04"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item05.jpg" alt="item05"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item06.jpg" alt="item06"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item07.jpg" alt="item07"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item08.jpg" alt="item08"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item09.jpg" alt="item09"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item10.jpg" alt="item10"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item11.jpg" alt="item11"/>
-					<h2 class="item__title"></h2>
-				</a>
-				<a href="#" class="item">
-					<img class="item__image" src="img/item12.jpg" alt="item12"/>
-					<h2 class="item__title"></h2>
-				</a>
-			</section>
-		
-		</div><!-- /container -->
-		<script src="js/classie.js"></script>
-		<script>
-			(function() {
-				var support = { animations : Modernizr.cssanimations },
-					animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
-					animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
-					onEndAnimation = function( el, callback ) {
-						var onEndCallbackFn = function( ev ) {
-							if( support.animations ) {
-								if( ev.target != this ) return;
-								this.removeEventListener( animEndEventName, onEndCallbackFn );
-							}
-							if( callback && typeof callback === 'function' ) { callback.call(); }
-						};
-						if( support.animations ) {
-							el.addEventListener( animEndEventName, onEndCallbackFn );
-						}
-						else {
-							onEndCallbackFn();
-						}
-					};
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sliding Header Grid Layout (Multi)</title>
+    <meta name="description" content="A multi grid layout with an initial fullscreen intro" />
+    <meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout-multi.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+    <svg class="hidden">
+        <g id="icon-grid">
+            <rect x="32.5" y="5.5" width="22" height="22" />
+            <rect x="4.5" y="5.5" width="22" height="22" />
+            <rect x="32.5" y="33.5" width="22" height="22" />
+            <rect x="4.5" y="33.5" width="22" height="22" />
+        </g>
+        <g id="icon-cross">
+            <line x1="4.5" y1="55.5" x2="54.953" y2="5.046" />
+            <line x1="54.953" y1="55.5" x2="4.5" y2="5.047" />
+        </g>
+    </svg>
+    <nav class="thumb-nav">
+        <a data-container="container-1" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb1.png" alt="thumb01" /><span>1</span></a>
+        <a data-container="container-2" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb2.png" alt="thumb02" /><span>2</span></a>
+        <a data-container="container-3" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb3.png" alt="thumb03" /><span>3</span></a>
+    </nav>
 
-				var containers = [].slice.call( document.querySelectorAll( '.container' ) ),
-					containersCount = containers.length,
-					nav = document.querySelector( 'nav.thumb-nav' ),
-					pageTriggers = [].slice.call( nav.children ),
-					isAnimating = false, current = 0;
+    <nav class="thumb-nav">
+        <a data-container="container-1" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb1.png" alt="thumb01" /><span>1</span></a>
+        <a data-container="container-2" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb2.png" alt="thumb02" /><span>2</span></a>
+        <a data-container="container-3" class="thumb-nav__item" href="#"><img src="img/thumbs/thumb3.png" alt="thumb03" /><span>3</span></a>
+    </nav>
 
-				function init() {
-					resetScroll();
-					// disable scrolling
-					window.addEventListener( 'scroll', noscroll );
-					// set current page trigger
-					classie.add( pageTriggers[ current ], 'thumb-nav__item--current' );
-					// set current container
-					classie.add( containers[ current ], 'container--current' );
-					// initialize events
-					initEvents();
-				}
+    <i class="material-icons">face</i>
 
-				function initEvents() {
-					// slideshow navigation
-					pageTriggers.forEach( function( pageTrigger ) {
-						pageTrigger.addEventListener( 'click', function( ev ) {
-							ev.preventDefault();
-							navigate( this );
-						} );
-					} );
+    <div id="container-1" class="container theme-1">
+        <header class="intro">
+            <img class="intro__image" src="img/header01.jpg" alt="Books" />
+            <div class="intro__content">
+                <h1 class="intro__title">It's Not Lost</h1>
 
-					// open each container's content area when clicking on the respective trigger button
-					containers.forEach( function( container ) {
-						container.querySelector( 'button.trigger' ).addEventListener( 'click', function() {
-							toggleContent( container, this );
-						} );
-					} );
+                <div class="intro__subtitle">
+                    <h2>One of your best buddies has it, but which one?</h2>
+                    <button class="trigger">
+                        <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+                            <use class="icon icon--grid" xlink:href="#icon-grid" />
+                            <use class="icon icon--cross" xlink:href="#icon-cross" />
+                        </svg>
+                        <span>Toggle content</span>
+                    </button>
+                </div>
+            </div><!-- /intro__content -->
+        </header><!-- /intro -->
+        <section class="items-wrap">
+            <a href="#" class="item">
+                <img class="item__image" src="img/item01.jpg" alt="item01" />
+                <h2 class="item__title">You Love It</h2><br />
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item02.jpg" alt="item02" />
+                <h2 class="item__title">You Need It</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item03.jpg" alt="item03" />
+                <h2 class="item__title">You Own It</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item04.jpg" alt="item04" />
+                <h2 class="item__title">Where Is It???</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item05.jpg" alt="item05" />
+                <h2 class="item__title">Your Tools</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item06.jpg" alt="item06" />
+                <h2 class="item__title">Your Movies</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item07.jpg" alt="item07" />
+                <h2 class="item__title">Your Video Games</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item08.jpg" alt="item08" />
+                <h2 class="item__title">Your Girls Stuff</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item09.jpg" alt="item09" />
+                <h2 class="item__title">Your Boy Stuff</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item10.jpg" alt="item10" />
+                <h2 class="item__title">Your Precious</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item11.jpg" alt="item11" />
+                <h2 class="item__title">Store it all easily, find it quickly</h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item12.jpg" alt="item12" />
+                <h2 class="item__title">There is an app for that!</h2>
+            </a>
+        </section>
 
-					// keyboard navigation events
-					document.addEventListener( 'keydown', function( ev ) {
-						var keyCode = ev.keyCode || ev.which,
-							isContainerOpen = containers[ current ].getAttribute( 'data-open' ) == 'open';
+    </div><!-- /container -->
+    <div id="container-2" class="container theme-2">
+        <header class="intro">
+            <img class="intro__image" src="img/header02.jpg" alt="Road" />
+            <div class="intro__content">
+                <h1 class="intro__title">It's On Loan</h1>
+                <div class="intro__subtitle">
+                    <button class="trigger">
+                        <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+                            <use class="icon icon--grid" xlink:href="#icon-grid" />
+                            <use class="icon icon--cross" xlink:href="#icon-cross" />
+                        </svg>
+                        <span>Toggle content</span>
+                    </button>
+                </div>
+            </div><!-- /intro__content -->
+        </header><!-- /intro -->
+        <section class="items-wrap">
+            <a href="#" class="item">
+                <img class="item__image" src="img/item01.jpg" alt="item01" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item02.jpg" alt="item02" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item03.jpg" alt="item03" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item04.jpg" alt="item04" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item05.jpg" alt="item05" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item06.jpg" alt="item06" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item07.jpg" alt="item07" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item08.jpg" alt="item08" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item09.jpg" alt="item09" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item10.jpg" alt="item10" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item11.jpg" alt="item11" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item12.jpg" alt="item12" />
+                <h2 class="item__title"></h2>
+            </a>
+        </section>
 
-						switch (keyCode) {
-							// left key
-							case 37:
-								if( current > 0 && !isContainerOpen ) {
-									navigate( pageTriggers[ current - 1 ] );
-								}
-								break;
-							// right key
-							case 39:
-								if( current < containersCount - 1 && !isContainerOpen ) {
-									navigate( pageTriggers[ current + 1 ] );
-								}
-								break;
-						}
-					} );
-				}
+    </div><!-- /container -->
+    <div id="container-3" class="container">
+        <header class="intro">
+            <img class="intro__image" src="img/header03.jpg" alt="Glacier" />
+            <div class="intro__content">
+                <h1 class="intro__title">Roba</h1>
+                <h2>The App That Keeps Track Of Your Sh**uff!</h2>
+                <div class="intro__subtitle">
+                    <button class="trigger">
+                        <svg width="100%" height="100%" viewBox="0 0 60 60" preserveAspectRatio="none">
+                            <use class="icon icon--grid" xlink:href="#icon-grid" />
+                            <use class="icon icon--cross" xlink:href="#icon-cross" />
+                        </svg>
+                        <span>Toggle content</span>
+                    </button>
+                </div>
+            </div><!-- /intro__content -->
+        </header><!-- /intro -->
+        <section class="items-wrap">
+            <a href="#" class="item">
+                <img class="item__image" src="img/item01.jpg" alt="item01" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item02.jpg" alt="item02" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item03.jpg" alt="item03" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item04.jpg" alt="item04" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item05.jpg" alt="item05" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item06.jpg" alt="item06" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item07.jpg" alt="item07" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item08.jpg" alt="item08" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item09.jpg" alt="item09" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item10.jpg" alt="item10" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item11.jpg" alt="item11" />
+                <h2 class="item__title"></h2>
+            </a>
+            <a href="#" class="item">
+                <img class="item__image" src="img/item12.jpg" alt="item12" />
+                <h2 class="item__title"></h2>
+            </a>
+        </section>
 
-				function navigate( pageTrigger ) {
-					var oldcurrent = current,
-						newcurrent = pageTriggers.indexOf( pageTrigger );
+    </div><!-- /container -->
+    <script src="js/classie.js"></script>
+    <script>(function () {
+            var support = { animations: Modernizr.cssanimations },
+                animEndEventNames = { 'WebkitAnimation': 'webkitAnimationEnd', 'OAnimation': 'oAnimationEnd', 'msAnimation': 'MSAnimationEnd', 'animation': 'animationend' },
+                animEndEventName = animEndEventNames[Modernizr.prefixed('animation')],
+                onEndAnimation = function (el, callback) {
+                    var onEndCallbackFn = function (ev) {
+                        if (support.animations) {
+                            if (ev.target != this) return;
+                            this.removeEventListener(animEndEventName, onEndCallbackFn);
+                        }
+                        if (callback && typeof callback === 'function') { callback.call(); }
+                    };
+                    if (support.animations) {
+                        el.addEventListener(animEndEventName, onEndCallbackFn);
+                    }
+                    else {
+                        onEndCallbackFn();
+                    }
+                };
 
-					if( isAnimating || oldcurrent === newcurrent ) return;
-					isAnimating = true;
+            var containers = [].slice.call(document.querySelectorAll('.container')),
+                containersCount = containers.length,
+                nav = document.querySelector('nav.thumb-nav'),
+                pageTriggers = [].slice.call(nav.children),
+                isAnimating = false, current = 0;
 
-					// reset scroll
-					allowScroll();
-					resetScroll();
-					preventScroll();
+            function init() {
+                resetScroll();
+                // disable scrolling
+                window.addEventListener('scroll', noscroll);
+                // set current page trigger
+                classie.add(pageTriggers[current], 'thumb-nav__item--current');
+                // set current container
+                classie.add(containers[current], 'container--current');
+                // initialize events
+                initEvents();
+            }
 
-					var currentPageTrigger = pageTriggers[ current ],
-						nextContainer = document.getElementById( pageTrigger.getAttribute( 'data-container' ) ),
-						currentContainer = containers[ current ],
-						dir = newcurrent > oldcurrent ? 'left' : 'right';
+            function initEvents() {
+                // slideshow navigation
+                pageTriggers.forEach(function (pageTrigger) {
+                    pageTrigger.addEventListener('click', function (ev) {
+                        ev.preventDefault();
+                        navigate(this);
+                    });
+                });
 
-					classie.remove( currentPageTrigger, 'thumb-nav__item--current' );
-					classie.add( pageTrigger, 'thumb-nav__item--current' );
+                // open each container's content area when clicking on the respective trigger button
+                containers.forEach(function (container) {
+                    container.querySelector('button.trigger').addEventListener('click', function () {
+                        toggleContent(container, this);
+                    });
+                });
 
-					// update current
-					current = newcurrent;
+                // keyboard navigation events
+                document.addEventListener('keydown', function (ev) {
+                    var keyCode = ev.keyCode || ev.which,
+                        isContainerOpen = containers[current].getAttribute('data-open') == 'open';
 
-					// add animation classes
-					classie.add( nextContainer, dir === 'left' ? 'container--animInRight' : 'container--animInLeft' );
-					classie.add( currentContainer, dir === 'left' ? 'container--animOutLeft' : 'container--animOutRight' );
+                    switch (keyCode) {
+                        // left key
+                        case 37:
+                            if (current > 0 && !isContainerOpen) {
+                                navigate(pageTriggers[current - 1]);
+                            }
+                            break;
+                        // right key
+                        case 39:
+                            if (current < containersCount - 1 && !isContainerOpen) {
+                                navigate(pageTriggers[current + 1]);
+                            }
+                            break;
+                    }
+                });
+            }
 
-					onEndAnimation( currentContainer, function() {
-						// clear animation classes
-						classie.remove( currentContainer, dir === 'left' ? 'container--animOutLeft' : 'container--animOutRight' );
-						classie.remove( nextContainer, dir === 'left' ? 'container--animInRight' : 'container--animInLeft' );
+            function navigate(pageTrigger) {
+                var oldcurrent = current,
+                    newcurrent = pageTriggers.indexOf(pageTrigger);
 
-						// clear current class / set current class
-						classie.remove( currentContainer, 'container--current' );
-						classie.add( nextContainer, 'container--current' );
+                if (isAnimating || oldcurrent === newcurrent) return;
+                isAnimating = true;
 
-						isAnimating = false;
-					} );
-				}
+                // reset scroll
+                allowScroll();
+                resetScroll();
+                preventScroll();
 
-				// show content section
-				function toggleContent( container, trigger ) {
-					if( classie.has( container, 'container--open' ) ) {
-						classie.remove( container, 'container--open' );
-						classie.remove( trigger, 'trigger--active' );
-						classie.remove( nav, 'thumb-nav--hide' );
-						container.setAttribute( 'data-open', '' );
-						preventScroll();
-					}
-					else {
-						classie.add( container, 'container--open' );
-						classie.add( trigger, 'trigger--active' );
-						classie.add( nav, 'thumb-nav--hide' );
-						container.setAttribute( 'data-open', 'open' );
-						allowScroll();
-					}
-				}
+                var currentPageTrigger = pageTriggers[current],
+                    nextContainer = document.getElementById(pageTrigger.getAttribute('data-container')),
+                    currentContainer = containers[current],
+                    dir = newcurrent > oldcurrent ? 'left' : 'right';
 
-				// scroll functions
-				function resetScroll() { document.body.scrollTop = document.documentElement.scrollTop = 0; }
-				function preventScroll() { window.addEventListener( 'scroll', noscroll ); }
-				function allowScroll() { window.removeEventListener( 'scroll', noscroll ); }
-				function noscroll() { 
-					window.scrollTo( 0, 0 ); 
-				}
+                classie.remove(currentPageTrigger, 'thumb-nav__item--current');
+                classie.add(pageTrigger, 'thumb-nav__item--current');
 
-				init();
+                // update current
+                current = newcurrent;
 
-				// For Demo purposes only (prevent jump on click)
-				[].slice.call( document.querySelectorAll('.items-wrap a') ).forEach( function(el) { el.onclick = function() { return false; } } );
-			})();
-		</script>
-	</body>
+                // add animation classes
+                classie.add(nextContainer, dir === 'left' ? 'container--animInRight' : 'container--animInLeft');
+                classie.add(currentContainer, dir === 'left' ? 'container--animOutLeft' : 'container--animOutRight');
+
+                onEndAnimation(currentContainer, function () {
+                    // clear animation classes
+                    classie.remove(currentContainer, dir === 'left' ? 'container--animOutLeft' : 'container--animOutRight');
+                    classie.remove(nextContainer, dir === 'left' ? 'container--animInRight' : 'container--animInLeft');
+
+                    // clear current class / set current class
+                    classie.remove(currentContainer, 'container--current');
+                    classie.add(nextContainer, 'container--current');
+
+                    isAnimating = false;
+                });
+            }
+
+            // show content section
+            function toggleContent(container, trigger) {
+                if (classie.has(container, 'container--open')) {
+                    classie.remove(container, 'container--open');
+                    classie.remove(trigger, 'trigger--active');
+                    classie.remove(nav, 'thumb-nav--hide');
+                    container.setAttribute('data-open', '');
+                    preventScroll();
+                }
+                else {
+                    classie.add(container, 'container--open');
+                    classie.add(trigger, 'trigger--active');
+                    classie.add(nav, 'thumb-nav--hide');
+                    container.setAttribute('data-open', 'open');
+                    allowScroll();
+                }
+            }
+
+            // scroll functions
+            function resetScroll() { document.body.scrollTop = document.documentElement.scrollTop = 0; }
+            function preventScroll() { window.addEventListener('scroll', noscroll); }
+            function allowScroll() { window.removeEventListener('scroll', noscroll); }
+            function noscroll() {
+                window.scrollTo(0, 0);
+            }
+
+            init();
+
+
+            [].slice.call(document.querySelectorAll('.items-wrap a')).forEach(function (el) { el.onclick = function () { return false; } });
+        })();</script>
+</body>
 </html>

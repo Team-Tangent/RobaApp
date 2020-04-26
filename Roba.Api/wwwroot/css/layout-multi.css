@@ -77,13 +77,14 @@ body {
 	position: fixed;
 	z-index: 1000; /* behind the background by default; changes the render order */
 	top: 56px;
-	right: 77px;
+	right: 55px;
+    opacity: .8;
 }
 
 /* Icon styles */
 .login-container i.fa {
 	color: white;
-	font-size: 48px;
+	font-size: 55px;
 }
 
 /* Container styles */

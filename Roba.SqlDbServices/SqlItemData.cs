@@ -26,7 +26,7 @@ namespace Roba.SqlDbServices
 
         public List<Item> GetAllItemsForUser(Guid UserId)
         {
-            return context.Items.Where(x => x.Owner == UserId).ToList();
+            return context.Items.Where(x => x.UserId == UserId).ToList();
         }
 
         public Item GetItemById(int ItemId)

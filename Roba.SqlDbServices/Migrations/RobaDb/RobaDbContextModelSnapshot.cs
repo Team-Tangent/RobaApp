@@ -39,9 +39,11 @@ namespace Roba.SqlDbServices.Migrations.RobaDb
 
                     b.Property<bool>("LentOut");
 
-                    b.Property<Guid>("Owner");
+                    b.Property<string>("LentTo");
 
                     b.Property<DateTime>("ReturnDate");
+
+                    b.Property<Guid>("UserId");
 
                     b.HasKey("ItemId");
 

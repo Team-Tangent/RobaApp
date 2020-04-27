@@ -74,4 +74,12 @@ export class ItemListComponent implements OnInit {
     }
   }
 
+  itemReturned(item) {
+    if(item.itemId){
+      item.lentOut = false;
+      item.lentTo = '';
+    }
+    return this.itemService.save(item.itemId);
+  }
+
 }

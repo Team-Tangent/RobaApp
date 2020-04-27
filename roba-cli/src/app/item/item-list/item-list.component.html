@@ -21,8 +21,13 @@
       <div class="btnGroup">
         <a mat-flat-button (click)="openDetail(item)">View</a>
         <a mat-flat-button (click)="deleteItem(item)">Delete</a> <!-- click event to delete item -->
-        <a mat-flat-button (click)="lendOut(item.itemId)">{{item.lentOut ? 'Return' : 'Lend Out'}}</a>
-        <!-- click event to lend out item, opens a modal -->
+        <div *ngIf="!item.lentOut; else return">
+          <a mat-flat-button (click)="lendOut(item.itemId)">Lend Out</a>
+          <!-- click event to lend out item, opens a modal -->
+        </div>
+        <ng-template #return>
+          <a mat-flat-button (click)="itemReturned(item)">Return</a>
+        </ng-template>
       </div>
     </mat-card-actions>
   </mat-card>

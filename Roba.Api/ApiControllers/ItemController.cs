@@ -68,10 +68,11 @@ namespace Roba.Api.ApiControllers
             var item = new Item
             {
                 ItemName = model.ItemName,
-                Owner = model.Owner,
+                UserId = model.UserId,
                 CreatedOnDate = model.CreatedOnDate,
                 CanBeBorrowed = model.CanBeBorrowed,
                 LentOut = model.LentOut,
+                LentTo = model.LentTo,
                 ImageFileContent = model.ImageFileContent,
                 ImageFileType = model.ImageFileType
             };
@@ -102,6 +103,7 @@ namespace Roba.Api.ApiControllers
             //update only editable properties from model
             item.ItemName = model.ItemName;
             item.LentOut = model.LentOut;
+            item.LentTo = model.LentTo;
             item.CanBeBorrowed = model.CanBeBorrowed;
             item.BorrowedDate = model.BorrowedDate;
             item.ImageFileContent = model.ImageFileContent;

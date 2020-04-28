@@ -17,7 +17,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedImportsModule } from './shared/shared-imports.module';
 import { AccountModule } from './account/account.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { layoutFeatureKey, layoutReducer } from './store/layout.store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -25,6 +25,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { SlideshowModule } from 'ng-simple-slideshow';
 
 import { environment } from '../environments/environment';
+import { JwtInterceptor } from './account/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,13 @@ import { environment } from '../environments/environment';
     }),
     EffectsModule.forRoot([]),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

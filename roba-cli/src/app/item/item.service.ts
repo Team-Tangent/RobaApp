@@ -13,18 +13,13 @@ export class ItemService {
   }
 
   search(): Observable<Item[]> { 
-    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    return this.http.get<Item[]>('/api/items/user/' + currentUser.id);
+    return this.http.get<Item[]>('/api/items/user/current');
     //return of(this.items); // this needs to be fixed;
   }
 
   save(item: Item): Observable<Item> {
     if(item.itemId > 0){
-      const params = new HttpParams();
-      params.set('id', '' + item.itemId);
-      return this.http.post<Item>('/api/items/:id', item, {
-        params
-      });
+      return this.http.put<Item>('/api/items/' + item.itemId, item);
     }
     return this.http.post<Item>('/api/items', item);
     // if(item.itemId === 0){
@@ -37,9 +32,9 @@ export class ItemService {
   }
 
   delete(item: Item): Observable<boolean> {
-    //return this.http.delete<Item>('/api/item/delete', item);
-    this.items = this.items.filter((x) => x.itemId !== item.itemId);
-    return of(true);
+    return this.http.delete<boolean>('/api/item/' + item.itemId);
+    //this.items = this.items.filter((x) => x.itemId !== item.itemId);
+    //return of(true);
   }
 
   // items: Item[] = [

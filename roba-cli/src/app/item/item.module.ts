@@ -10,6 +10,8 @@ import { ItemCreateDialogComponent } from './item-create-dialog/item-create-dial
 import { ReactiveFormsModule } from '@angular/forms';
 import { ItemService } from './item.service';
 import { ItemLendOutDialogComponent } from './item-lend-out-dialog/item-lend-out-dialog.component';
+import { JwtInterceptor } from '../account/jwt.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 @NgModule({
@@ -28,6 +30,11 @@ import { ItemLendOutDialogComponent } from './item-lend-out-dialog/item-lend-out
   ],
   providers: [
     ItemService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true,
+    },
   ],
   entryComponents : [
     ItemCreateDialogComponent,

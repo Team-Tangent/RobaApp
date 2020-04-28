@@ -28,7 +28,7 @@ export class ItemListComponent implements OnInit {
   }
 
   search() {
-    this.itemService.search();
+    this.items$ = this.itemService.search();
   }
 
   addItem() {

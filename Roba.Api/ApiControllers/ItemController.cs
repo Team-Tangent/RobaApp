@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Roba.Api.ApiControllers
 {
+    [Authorize(Policy = "ApiUser")]
     [Route("api/items")]
     public class ItemController : Controller
     {
@@ -37,14 +39,13 @@ namespace Roba.Api.ApiControllers
 
         // GET api/items/:id
         //GET ALL Items for a Single USER
-        [HttpGet("user/currentUser")]
-        public async Task<IActionResult> GetAllItemsForUser()
+        [HttpGet("user/current")]
+        public IActionResult GetAllItemsForUser()
         {
-        
-                var user = await _userManager.FindByNameAsync(User.Identity.Name);
-                var userId = user.Id;
 
-                var items = _itemData.GetAllItemsForUser(userId);
+            System.Security.Claims.Claim userIdClaim = User.Claims.Single(c => c.Type == "id");
+
+            var items = _itemData.GetAllItemsForUser(Guid.Parse(userIdClaim.Value));
             return Ok(items);
         }
 
@@ -65,16 +66,18 @@ namespace Roba.Api.ApiControllers
             {
                 return BadRequest();
             }
+            System.Security.Claims.Claim userIdClaim = User.Claims.Single(c => c.Type == "id");
+            var user = _userManager.Users.FirstOrDefault(x => x.Id.ToString() == userIdClaim.Value);
             var item = new Item
             {
                 ItemName = model.ItemName,
-                UserId = model.UserId,
-                CreatedOnDate = model.CreatedOnDate,
+                UserId = user.Id,
+                CreatedOnDate = DateTime.UtcNow,
                 CanBeBorrowed = model.CanBeBorrowed,
                 LentOut = model.LentOut,
                 LentTo = model.LentTo,
                 ImageFileContent = model.ImageFileContent,
-                ImageFileType = model.ImageFileType
+                ImageFileType = "URL"
             };
             _itemData.AddItem(item);
             _itemData.Commit();

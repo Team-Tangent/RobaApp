@@ -8,12 +8,12 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   get(itemId: number): Observable<Item> {
-    //return this.http.get<Item>('api/item/' + itemId);
+    // return this.http.get<Item>('api/item/' + itemId);
     return of(this.items.find((item) => item.itemId === itemId)); // needs to be fixed
   }
 
   search(term: string): Observable<Item[]> {
-    // return this.http.get<Item[]>('/api/item/search?term=' + term);
+    //return this.http.get<Item[]>('/api/item/search?term=' + term);
     return of(this.items); // this needs to be fixed;
   }
 
@@ -36,7 +36,7 @@ export class ItemService {
   }
 
   delete(item: Item): Observable<boolean> {
-    // return this.http.delete<Item>('/api/item/delete, item);
+    //return this.http.delete<Item>('/api/item/delete', item);
     this.items = this.items.filter((x) => x.itemId !== item.itemId);
     return of(true);
   }

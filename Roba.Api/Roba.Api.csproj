@@ -32,6 +32,7 @@
   <ItemGroup>
     <Content Remove="wwwroot\css\demo.css" />
     <Content Remove="wwwroot\css\layout-simple.css" />
+    <Content Remove="wwwroot\css\normalize.css" />
     <Content Remove="wwwroot\img\item04.jpg" />
     <Content Remove="wwwroot\img\item05 .jpg" />
     <Content Remove="wwwroot\img\item08.jpg" />

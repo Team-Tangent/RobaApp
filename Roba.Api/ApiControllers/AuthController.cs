@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.HttpSys;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -119,6 +120,12 @@ namespace Roba.Api.ApiControllers
             return Ok(userModel);
         }
 
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            return Ok();
+        }
+
         [Authorize(Policy = "ApiUser")]
         [HttpPost] // POST api/auth/verify
         [Route("verify")]
@@ -172,7 +179,7 @@ namespace Roba.Api.ApiControllers
             if (string.IsNullOrEmpty(emailAddress) || string.IsNullOrEmpty(password))
                 return await Task.FromResult<RobaIdentityUser>(null);
 
-            // get the user to verifty
+            // get the user to verify
             var userToVerify = await _userManager.FindByNameAsync(emailAddress);
 
             if (userToVerify == null) return await Task.FromResult<RobaIdentityUser>(null);

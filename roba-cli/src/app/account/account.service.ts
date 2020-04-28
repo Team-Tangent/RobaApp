@@ -64,7 +64,7 @@ export class AccountService {
     this.cachedUser = anonymousUser();
     localStorage.removeItem('currentUser');
 
-    this.http.post<any>(this.baseUrl + '/logout', {}).subscribe(() => {
+    this.http.post<any>(this.baseUrl + 'logout', {}).subscribe(() => {
       this.router.navigate(['./account/logout']);
     });
   }

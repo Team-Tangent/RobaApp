@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Store, select } from '@ngrx/store';
 import { selectShowSideNav, toggleSidenav, LayoutState, closeSidenav } from '../store/layout.store';
+import { AccountService } from '../account/account.service';
 
 
 
@@ -21,8 +22,18 @@ export class AppNavComponent {
     );
     showSideNav$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver, private store: Store<LayoutState>) {
+  constructor(private breakpointObserver: BreakpointObserver, 
+            private store: Store<LayoutState>,
+            private accountService: AccountService) {
     this.showSideNav$ = this.store.pipe(select(selectShowSideNav));
+  }
+
+  login() {
+    this.accountService.login();
+  }
+
+  logout() {
+    this.accountService.logout();
   }
 
   sideNavToggle() {

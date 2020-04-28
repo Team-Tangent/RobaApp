@@ -22,6 +22,7 @@ namespace Roba.SqlDbServices
         public void DeleteItem(Item item)
         {
             context.Remove(item);
+            
         }
 
         public List<Item> GetAllItemsForUser(Guid UserId)

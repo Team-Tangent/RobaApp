@@ -119,6 +119,7 @@ namespace Roba.Api.ApiControllers
         [HttpDelete("{id}")]
         public IActionResult DeleteItem(Item item)
         {
+            var item = _itemData.
             _itemData.DeleteItem(item);
             return Ok();
         }

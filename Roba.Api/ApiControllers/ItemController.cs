@@ -86,7 +86,7 @@ namespace Roba.Api.ApiControllers
 
         // PUT api/<controller>/5
         [HttpPut("{itemId}")]
-        public IActionResult UpdateItem(int itemId, Item model)
+        public IActionResult UpdateItem(int itemId, [FromBody]Item model)
         {
              if (model == null)
             {

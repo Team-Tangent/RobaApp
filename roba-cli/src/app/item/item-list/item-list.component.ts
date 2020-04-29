@@ -53,11 +53,11 @@ export class ItemListComponent implements OnInit {
     })
   }
 
-  lendOut() {
+  lendOut(item: Item) {
     const dialogRef = this.dialog.open(ItemLendOutDialogComponent, {
       width: '300px',
       height: '300px',
-      data: null,
+      data: item,
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -74,12 +74,12 @@ export class ItemListComponent implements OnInit {
     }
   }
 
-  itemReturned(item) {
+  itemReturned(item: Item) {
     if(item.itemId){
       item.lentOut = false;
       item.lentTo = '';
     }
-    return this.itemService.save(item.itemId);
+    return this.itemService.save(item);
   }
 
 }

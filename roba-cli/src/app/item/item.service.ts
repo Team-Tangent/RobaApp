@@ -9,12 +9,10 @@ export class ItemService {
 
   get(itemId: number): Observable<Item> {
     return this.http.get<Item>('api/items/' + itemId);
-    //return of(this.items.find((item) => item.itemId === itemId)); // needs to be fixed
   }
 
   search(): Observable<Item[]> { 
     return this.http.get<Item[]>('/api/items/user/current');
-    //return of(this.items); // this needs to be fixed;
   }
 
   save(item: Item): Observable<Item> {

@@ -25,7 +25,6 @@ export class ItemService {
   }
 
   delete(item: Item): Observable<boolean> {
-    //const id: string = item.itemId.toString();
     return this.http.delete<boolean>('/api/items/' + item.itemId);
   }
 

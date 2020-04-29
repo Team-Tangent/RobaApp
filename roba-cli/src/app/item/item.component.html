@@ -4,14 +4,12 @@
             <form [formGroup]="detailForm" novalidate>
                 <section>
                     <div class="card-image">
-                        <!-- <img mat-card-image src={{item.image}} /> -->
-                        <img mat-card-image
-                            src="https://images.unsplash.com/photo-1530328411047-7063dbd29029?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" />
+                        <img mat-card-image src={{item.imageFileContent}} />
                     </div>
                     <section class="editContent">
                         <mat-form-field>
                             <mat-label>Item Name</mat-label>
-                            <input matInput formControlName="itemName" name="itemName">
+                            <input matInput placeholder={{item.itemName}} formControlName="itemName" name="itemName">
                             <mat-error>Item Name is Required</mat-error>
                         </mat-form-field>
                         <mat-form-field>
@@ -35,7 +33,6 @@
             <a mat-mini-fab routeLinkActive="selected" [routerLink]="['']">
                 <mat-icon>keyboard_backspace</mat-icon>
             </a>
-            <!-- <button mat-raised-button disabled (click)="save()">Delete</button> -->
         </mat-card-actions>
     </mat-card>
 </div>

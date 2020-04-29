@@ -14,7 +14,13 @@
         {{item.itemName}}
       </mat-card-title>
       <mat-card-subtitle>
-        {{item.lentOut ? item.lentTo + ' has it!' : 'Created on ' + item.createdOnDate }}
+        <div *ngIf="item.lentOut; else returned">
+          <p>{{item.lentTo}} ' has it!'</p>
+          <!-- click event to lend out item, opens a modal -->
+        </div>
+        <ng-template #returned>
+          <p>Created on: {{item.createdOnDate | date}}</p>
+        </ng-template>
       </mat-card-subtitle>
     </mat-card-content>
     <mat-card-actions>
@@ -22,7 +28,7 @@
         <a mat-flat-button (click)="openDetail(item)">View</a>
         <a mat-flat-button (click)="deleteItem(item)">Delete</a> <!-- click event to delete item -->
         <div *ngIf="!item.lentOut; else return">
-          <a mat-flat-button (click)="lendOut(item.itemId)">Lend Out</a>
+          <a mat-flat-button (click)="lendOut(item)">Lend Out</a>
           <!-- click event to lend out item, opens a modal -->
         </div>
         <ng-template #return>

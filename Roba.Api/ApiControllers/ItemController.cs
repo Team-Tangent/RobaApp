@@ -30,10 +30,10 @@ namespace Roba.Api.ApiControllers
         }
 
         //  ./api/items/:id
-        [HttpGet("{ItemId}")]
-        public IActionResult GetSingleItem(int id)
+        [HttpGet("{itemId}")]
+        public IActionResult GetSingleItem(int itemId)
         {
-            var item = _itemData.GetItemById(id);
+            var item = _itemData.GetItemById(itemId);
             return Ok(item);
         }
 
@@ -51,7 +51,7 @@ namespace Roba.Api.ApiControllers
 
         // GET api/items/:id
         //GET ALL Items for a Single USER
-        [HttpGet("user/{UserId}")]
+        [HttpGet("user/{userId}")]
         public IActionResult GetAllItemsForUser(Guid userId)
         {
             var items = _itemData.GetAllItemsForUser(userId);
@@ -85,8 +85,8 @@ namespace Roba.Api.ApiControllers
         }
 
         // PUT api/<controller>/5
-        [HttpPut("{id}")]
-        public IActionResult UpdateItem(int ItemId, Item model)
+        [HttpPut("{itemId}")]
+        public IActionResult UpdateItem(int itemId, [FromBody]Item model)
         {
              if (model == null)
             {
@@ -97,7 +97,7 @@ namespace Roba.Api.ApiControllers
                 return new ValidationFailedResult(ModelState);
             }
 
-            var item = _itemData.GetItemById(ItemId);
+            var item = _itemData.GetItemById(itemId);
             if (item == null)
             {
                 return NotFound();
@@ -119,13 +119,18 @@ namespace Roba.Api.ApiControllers
         }
 
         // DELETE api/item/:id
-        [HttpDelete("{id}")]
+        [HttpDelete("{itemId}")]
         public IActionResult DeleteItem(int itemId)
         {
             var item = _itemData.GetItemById(itemId);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
             _itemData.DeleteItem(item);
             _itemData.Commit();
-            return Ok();
+            return NoContent();
         }
     }
 }

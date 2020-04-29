@@ -4,7 +4,7 @@ export interface Item {
   itemId: number;
   itemName: string;
   createdOnDate: string;
-  ownerId: string;
+  userId: string;
   lentOut: boolean;
   lentTo: string;
   canBeBorrowed: boolean;

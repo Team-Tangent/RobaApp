@@ -16,7 +16,7 @@ export class ItemLendOutDialogComponent implements OnInit {
     public dialogRef: MatDialogRef<ItemLendOutDialogComponent>, 
     @Inject(MAT_DIALOG_DATA) public data: Item | null) {
       this.detailForm = this.fb.group({
-        lendTo: ['', Validators.required],
+        lentTo: ['', Validators.required],
       })
       if(this.data){
         this.detailForm.patchValue(this.data);

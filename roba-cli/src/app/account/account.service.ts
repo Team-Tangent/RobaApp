@@ -120,6 +120,7 @@ export class AccountService {
     } else {
       this.snackBar.open('Login Complete', '', { duration: 3000 });
       const returnUrl = localStorage.getItem('loginReturnUrl') || '';
+      console.log(returnUrl);
       this.router.navigate([returnUrl]);
     }
   }

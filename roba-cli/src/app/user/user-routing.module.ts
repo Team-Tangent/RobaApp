@@ -12,7 +12,10 @@ const routes: Routes = [ {
   canActivate: [AuthenticatedGuard]
 },
 {
-  path: 'profile'
+  path: 'profile',
+  pathMatch: 'full',
+  component: UserProfileComponent,
+  canActivate: [AuthenticatedGuard]
 }
 ];
 

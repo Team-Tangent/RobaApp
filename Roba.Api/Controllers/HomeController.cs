@@ -11,7 +11,7 @@ namespace Roba.Api.Controllers
     [Route("")]
     public class HomeController : Controller
     {
-        [Route("home")]
+        [Route("")]
         public IActionResult Index()
         {
             return View();

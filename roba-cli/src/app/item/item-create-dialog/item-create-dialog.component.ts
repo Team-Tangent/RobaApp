@@ -17,7 +17,7 @@ export class ItemCreateDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: Item | null) {
       this.detailForm = this.fb.group({
         itemName: ['',Validators.required],
-        image: [''],
+        imageFileContent: [''],
         itemType: ['VideoGame'],
       });
       if(this.data) {

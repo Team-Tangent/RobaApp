@@ -27,7 +27,7 @@ export class ItemComponent implements OnInit {
   createForm() {
     this.detailForm = this.fb.group({
       itemName: ['', Validators.required],
-      image: [''],
+      imageFileContent: [''],
       itemType: [''],
     })
   }

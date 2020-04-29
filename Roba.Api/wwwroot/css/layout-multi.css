@@ -73,8 +73,18 @@ body {
 	line-height: 65px;
 }
 
-.material-icons.md-48 {
-	font-size: 48px;
+.login-container {
+	position: fixed;
+	z-index: 1000; 
+	top: 56px;
+	right: 55px;
+    opacity: .8;
+}
+
+/* Icon styles */
+.login-container i.fa {
+	color: white;
+	font-size: 55px;
 }
 
 /* Container styles */
@@ -298,7 +308,7 @@ body {
 	margin: 0 0 20px;
 	font-weight: 900;
 	font-size: 4em;
-	font-family: "serif", Georgia, Playfair Display;
+	font-family: "Playfair Display", Georgia, serif;
 	line-height: 1;
 	color: white;
 }
@@ -321,7 +331,7 @@ body {
 	-webkit-flex: none;
 	flex: none;
 	overflow: hidden;
-	margin: 0 0 0 20px;
+	margin: 0 0 0 775px;
 	padding: 0;
 	width: 40px;
 	height: 40px;
@@ -428,7 +438,7 @@ body {
 	padding: 1em;
 	color: #dbdbdb;
 	font-size: 1.85em;
-	font-family: "serif", Georgia, Playfair Display;
+	font-family: "Playfair Display", Georgia, serif;
 	line-height: 1;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;

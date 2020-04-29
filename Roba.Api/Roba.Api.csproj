@@ -30,7 +30,6 @@
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="wwwroot\css\demo.css" />
     <Content Remove="wwwroot\css\layout-simple.css" />
     <Content Remove="wwwroot\css\normalize.css" />
     <Content Remove="wwwroot\img\item04.jpg" />
@@ -41,6 +40,8 @@
     <Content Remove="wwwroot\img\item02.jpg" />
     <Content Remove="wwwroot\img\item02.jpg" />
     <Content Remove="wwwroot\img\item04.jpg" />
+    <Content Remove="wwwroot\css\normalize copy.css" />
+    <Content Remove="wwwroot\css\demo copy.css" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\multi-layout.html" />
@@ -60,5 +61,8 @@
     <EmbeddedResource Remove="wwwroot\img\item04.jpg" />
     <EmbeddedResource Remove="wwwroot\img\item08.jpg" />
     <EmbeddedResource Remove="wwwroot\img\item09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\normalize.css" />
   </ItemGroup>
 </Project>

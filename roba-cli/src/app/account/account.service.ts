@@ -45,6 +45,10 @@ export class AccountService {
     return this.cachedUser.name === 'Anonymous';
   }
 
+  public GetUser() {
+    return this.cachedUser;
+  }
+
   public login() {
     this.cachedUser = anonymousUser();
     localStorage.removeItem('currentUser');

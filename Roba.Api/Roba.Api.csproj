@@ -25,15 +25,20 @@
       <GlobalPropertiesToRemove>;WebPublishProfileFile</GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\layout-simple.css" />
     <Content Remove="wwwroot\css\normalize.css" />
+    <Content Remove="wwwroot\img\books.png" />
+    <Content Remove="wwwroot\img\header01.jpg" />
+    <Content Remove="wwwroot\img\header02.jpg" />
+    <Content Remove="wwwroot\img\header03.jpg" />
+    <Content Remove="wwwroot\img\item01.jpg" />
+    <Content Remove="wwwroot\img\item03.jpg" />
     <Content Remove="wwwroot\img\item04.jpg" />
     <Content Remove="wwwroot\img\item05 .jpg" />
+    <Content Remove="wwwroot\img\item05.jpg" />
+    <Content Remove="wwwroot\img\item06.jpg" />
+    <Content Remove="wwwroot\img\item07.jpg" />
     <Content Remove="wwwroot\img\item08.jpg" />
     <Content Remove="wwwroot\img\item09.jpg" />
     <Content Remove="wwwroot\img\item09.jpg" />
@@ -42,6 +47,10 @@
     <Content Remove="wwwroot\img\item04.jpg" />
     <Content Remove="wwwroot\css\normalize copy.css" />
     <Content Remove="wwwroot\css\demo copy.css" />
+    <Content Remove="wwwroot\img\item10.jpg" />
+    <Content Remove="wwwroot\img\item11.jpg" />
+    <Content Remove="wwwroot\img\item12.jpg" />
+    <Content Remove="wwwroot\img\thumb2 copy.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\multi-layout.html" />
@@ -53,14 +62,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Remove="wwwroot\img\item10.jpg" />
-    <EmbeddedResource Remove="wwwroot\img\item02.jpg" />
-    <EmbeddedResource Remove="wwwroot\img\item04.jpg" />
     <EmbeddedResource Remove="wwwroot\img\item05 .jpg" />
-    <EmbeddedResource Remove="wwwroot\img\item02.jpg" />
-    <EmbeddedResource Remove="wwwroot\img\item04.jpg" />
-    <EmbeddedResource Remove="wwwroot\img\item08.jpg" />
-    <EmbeddedResource Remove="wwwroot\img\item09.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\normalize.css" />
